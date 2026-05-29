@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Moodboard // ESCHEN 11 — Sand & Bronze</title>
+    <meta name="description" content="Offizielles Farb- und Materialmoodboard für das Neubauprojekt ESCHEN 11 in Eschenbach SG. Warmgrauer Sandstein, Nussbaum-Bronze und Champagner-Gold.">
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Self-Contained Moodboard Styling for Maximum Portability -->
+    <style>
+        :root {
+            /* Das offizielle Sand & Bronze Farbkonzept (Classic Luxury Edition) */
+            --color-sand-light: #f7f4eb;
+            --color-sand-beige: #cecac1;
+            --color-sand-dark: #e9e7e2;
+            --color-sand-muted: #e4e1d9;
+            
+            --color-bronze-light: #854c3f;
+            --color-bronze-base: #42312b;
+            --color-bronze-dark: #221815;
+            --color-bronze-charcoal: #100d0b;
+
+            --color-gold-light: #f3ebd9;
+            --color-gold-accent: #be8d45;
+            --color-gold-dark: #9e7333;
+
+            --color-oak: #42312b;
+            --color-white: #ffffff;
+            --color-border: rgba(82, 68, 52, 0.12);
+            --color-text-p: rgba(16, 13, 11, 0.82);
+
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            --transition-quick: all 0.25s ease-out;
+            
+            --box-shadow-soft: 0 10px 30px rgba(35, 29, 25, 0.03);
+            --box-shadow-medium: 0 20px 45px rgba(35, 29, 25, 0.06);
+            --border-radius-md: 8px;
+            --border-radius-lg: 16px;
+        }
+
+        /* Base styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-sand-light); /* KORREKTES warmes Cremeweiss */
+            color: var(--color-bronze-charcoal);
+            line-height: 1.75;
+            padding-bottom: 60px;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Dynamische Schrift- und Farb-Umschaltung (Morphic Themes) */
+        body.brand-rs11 {
+            /* Farbkonzept 01: Warm Modernism / Sand & Bronze für RS11 */
+            --color-sand-light: #f6f5f2;      /* Gebrochenes Kalkweiss */
+            --color-sand-beige: #d9d5cc;      /* Sandbeige */
+            --color-sand-dark: #eceae6;
+            --color-sand-muted: #eceae6;
+            --color-bronze-light: #854c3f;    /* Kupfer-Terracotta */
+            --color-bronze-base: #524434;     /* Eschenbach Bronze */
+            --color-bronze-dark: #3a2f24;     /* Abgedunkeltes Bronze */
+            --color-bronze-charcoal: #2d2a27;   /* Tiefes Basaltgrau / Haupttext */
+            --color-gold-light: #eceae6;
+            --color-gold-accent: #998f48;     /* Eloxiertes Messing */
+            --color-gold-dark: #81783c;
+            --color-oak: #524434;
+            --color-border: rgba(82, 68, 52, 0.1);
+            --color-text-p: rgba(45, 42, 39, 0.82);
+        }
+
+        body.brand-rs11 h1,
+        body.brand-rs11 h2,
+        body.brand-rs11 h3,
+        body.brand-rs11 h4,
+        body.brand-rs11 h5,
+        body.brand-rs11 h6,
+        body.brand-rs11 .brand-name,
+        body.brand-rs11 .specimen-large,
+        body.brand-rs11 .preview-headline,
+        body.brand-rs11 .ui-card-title {
+            font-family: 'Playfair Display', Georgia, serif !important;
+        }
+
+        body.brand-eschen11 {
+            /* Farbkonzept 03: Classic Luxury für ESCHEN 11 */
+            --color-sand-light: #f7f4eb;      /* Cremeweiss / Ivory */
+            --color-sand-beige: #cecac1;      /* Warm Sandstone */
+            --color-sand-dark: #e9e7e2;       /* Heller Sandstein */
+            --color-sand-muted: #e4e1d9;
+            --color-bronze-light: #854c3f;    /* Ziegelrot / Terracotta */
+            --color-bronze-base: #42312b;     /* Deep Walnut / Nussbaum (Balkongeländer) */
+            --color-bronze-dark: #221815;     /* Tiefes Nussbaum-Dunkelbraun */
+            --color-bronze-charcoal: #100d0b;   /* Kaviar-Schwarz */
+            --color-gold-light: #f3ebd9;      /* Champagner-Schimmer */
+            --color-gold-accent: #be8d45;     /* Champagner-Gold */
+            --color-gold-dark: #9e7333;
+            --color-oak: #42312b;
+            --color-border: rgba(82, 68, 52, 0.12);
+            --color-text-p: rgba(16, 13, 11, 0.82);
+        }
+
+        body.brand-eschen11 h1,
+        body.brand-eschen11 h2,
+        body.brand-eschen11 h3,
+        body.brand-eschen11 h4,
+        body.brand-eschen11 h5,
+        body.brand-eschen11 h6,
+        body.brand-eschen11 .brand-name,
+        body.brand-eschen11 .specimen-large,
+        body.brand-eschen11 .preview-headline,
+        body.brand-eschen11 .ui-card-title {
+            font-family: 'Cormorant Garamond', Georgia, serif !important;
+        }
+
+        /* --- Global Headings --- */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--color-bronze-dark);
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-weight: 300;
+            letter-spacing: -0.015em;
+        }
+
+        h3 {
+            font-size: clamp(1.3rem, 2vw, 1.8rem);
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            font-size: 1.05rem;
+            font-weight: 300;
+            line-height: 1.75;
+            color: var(--color-text-p);
+            letter-spacing: -0.01em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Header */
+        #moodboard-header {
+            background-color: var(--color-sand-light);
+            border-bottom: 1px solid var(--color-border);
+            padding: 30px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 30px rgba(35, 29, 25, 0.02);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-info h1 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            color: var(--color-bronze-dark);
+            line-height: 1;
+        }
+
+        .brand-info .sub {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            color: var(--color-gold-accent);
+            text-transform: uppercase;
+            margin-top: 4px;
+            display: block;
+        }
+
+        .back-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-bronze-base);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            transition: var(--transition-quick);
+            background-color: var(--color-white);
+        }
+
+        .back-link:hover {
+            border-color: var(--color-gold-accent);
+            color: var(--color-gold-accent);
+            transform: translateX(-2px);
+        }
+
+        /* Sections */
+        .mood-section {
+            padding: 80px 0 40px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .mood-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-header h3 {
+            font-size: 2rem;
+            color: var(--color-bronze-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            font-size: 1.05rem;
+            color: var(--color-bronze-light);
+            font-weight: 300;
+        }
+
+        /* Intro Section */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-text .badge {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-gold-accent);
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .intro-text h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .intro-text .lead {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: rgba(35, 29, 25, 0.85);
+            margin-bottom: 35px;
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: var(--color-sand-beige);
+            color: var(--color-bronze-dark);
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border-radius: 50px;
+            border: 1px solid rgba(82, 68, 52, 0.05);
+        }
+
+        .intro-visual .visual-wrapper {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--box-shadow-medium);
+            border: 1px solid rgba(82, 68, 52, 0.08);
+            position: relative;
+        }
+
+        .intro-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .visual-wrapper:hover img {
+            transform: scale(1.04);
+        }
+
+        /* Farbpalette Grid */
+        .colors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .color-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--box-shadow-soft);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .color-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--box-shadow-medium);
+            border-color: var(--color-gold-accent);
+        }
+
+        .color-swatch {
+            height: 150px;
+            width: 100%;
+            transition: var(--transition-quick);
+        }
+
+        .color-card:hover .color-swatch {
+            opacity: 0.95;
+        }
+
+        .color-info {
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .color-info .role {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-gold-accent);
+            font-weight: 600;
+            margin-bottom: 2px;
+            display: block;
+        }
+
+        .color-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-bronze-dark);
+            line-height: 1.2;
+        }
+
+        .color-hex {
+            font-size: 0.85rem;
+            font-family: monospace;
+            color: var(--color-bronze-light);
+            font-weight: 500;
+        }
+
+        .color-desc {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: rgba(35, 29, 25, 0.75);
+            margin: 4px 0 8px;
+        }
+
+        .color-origin {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-bronze-light);
+            opacity: 0.8;
+            border-top: 1px solid rgba(82, 68, 52, 0.08);
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: auto;
+        }
+
+        /* Materialität Grid */
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .material-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--box-shadow-soft);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .material-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--box-shadow-medium);
+            border-color: var(--color-gold-accent);
+        }
+
+        .material-preview {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--color-white);
+            position: relative;
+        }
+
+        .material-body {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .material-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-gold-accent);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .material-title {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--color-bronze-dark);
+        }
+
+        .material-desc {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: rgba(35, 29, 25, 0.75);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .material-standard {
+            margin-top: auto;
+            background-color: var(--color-sand-light);
+            border: 1px solid rgba(82, 68, 52, 0.05);
+            padding: 12px 15px;
+            border-radius: var(--border-radius-md);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--color-bronze-base);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .material-standard i {
+            color: var(--color-gold-accent);
+            font-size: 1rem;
+        }
+
+        /* Typografie Specimen */
+        .typography-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            padding: 50px;
+            box-shadow: var(--box-shadow-soft);
+        }
+
+        .typo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.2fr;
+            gap: 40px;
+        }
+
+        .typo-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-gold-accent);
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .typo-specimen h4 {
+            font-size: 2.5rem;
+            font-family: var(--font-serif);
+            margin-bottom: 20px;
+        }
+
+        /* Force Inter for the body font specimen card */
+        .typo-specimen.body-font h4,
+        .typo-specimen.body-font .specimen-large,
+        .typo-specimen.body-font .specimen-alphabet,
+        .typo-specimen.body-font .specimen-display,
+        .body-specimen-large,
+        .body-specimen-alphabet {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+            font-weight: 400;
+        }
+        
+        .typo-specimen.body-font h4 {
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+        
+        .typo-specimen.body-font .specimen-large {
+            font-size: 4rem;
+            line-height: 1;
+            color: var(--color-gold-accent);
+            font-weight: 400;
+        }
+
+        .specimen-display {
+            background-color: var(--color-sand-light);
+            border: 1px solid rgba(82, 68, 52, 0.06);
+            border-radius: var(--border-radius-md);
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .specimen-large {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            line-height: 1;
+            color: var(--color-gold-accent);
+        }
+
+        .specimen-alphabet {
+            font-size: 0.85rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            line-height: 1.6;
+            color: var(--color-bronze-light);
+        }
+
+        .preview-headline {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            line-height: 1.3;
+            color: var(--color-bronze-dark);
+            margin-bottom: 20px;
+        }
+
+        .preview-paragraph {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.7;
+            color: rgba(35, 29, 25, 0.8);
+        }
+
+        /* UI Preview Card */
+        .ui-mockup-container {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .ui-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--box-shadow-medium);
+            transition: var(--transition-smooth);
+        }
+
+        .ui-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 60px rgba(35, 29, 25, 0.1);
+        }
+
+        .ui-card-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .ui-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: var(--color-gold-accent);
+            color: var(--color-bronze-charcoal);
+            padding: 5px 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 4px;
+        }
+
+        .ui-card-body {
+            padding: 30px;
+        }
+
+        .ui-card-title {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            color: var(--color-bronze-dark);
+            margin-bottom: 10px;
+        }
+
+        .ui-card-desc {
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: rgba(35, 29, 25, 0.75);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .ui-card-meta {
+            display: flex;
+            gap: 20px;
+            border-top: 1px solid var(--color-border);
+            padding-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        .meta-item {
+            font-size: 0.8rem;
+            color: var(--color-bronze-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .meta-item i {
+            color: var(--color-gold-accent);
+        }
+
+        .ui-card-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--color-gold-accent);
+            color: var(--color-bronze-charcoal);
+            border: none;
+            font-family: var(--font-sans);
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: var(--transition-quick);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .ui-card-btn:hover {
+            background-color: var(--color-gold-dark);
+            color: var(--color-sand-light);
+        }
+
+        .ui-explanation h4 {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--color-bronze-dark);
+        }
+
+        .ui-explanation p {
+            font-size: 1.05rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .ui-explanation-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ui-explanation-list li {
+            position: relative;
+            padding-left: 25px;
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        .ui-explanation-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-gold-accent);
+            font-weight: bold;
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background-color: var(--color-bronze-charcoal);
+            color: var(--color-sand-light);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 10px 30px rgba(35, 29, 25, 0.15);
+            z-index: 1000;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+            opacity: 0;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Footer */
+        #moodboard-footer {
+            background-color: var(--color-bronze-charcoal);
+            color: var(--color-sand-light);
+            padding: 40px 0;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(251, 250, 247, 0.05);
+            margin-top: 80px;
+        }
+
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0.7;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 1024px) {
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .colors-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .materials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .typo-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .ui-mockup-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .ui-card {
+                max-width: 380px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .colors-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-flex {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            .footer-flex {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .typography-card {
+                padding: 30px 20px;
+            }
+            .specimen-display {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            @media (max-width: 580px) {
+                .colors-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+
+        /* --- Name Switcher Widget (RS11 vs ESCHEN 11) --- */
+        .name-switcher-widget {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: rgba(82, 68, 52, 0.05);
+            border: 1px solid var(--color-border);
+            padding: 4px 6px;
+            border-radius: 50px;
+            margin-left: 20px;
+            transition: var(--transition-smooth);
+        }
+
+        .widget-label {
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-bronze-light);
+            margin-left: 10px;
+        }
+
+        .switcher-pill {
+            display: flex;
+            gap: 2px;
+            background-color: rgba(82, 68, 52, 0.08);
+            padding: 2px;
+            border-radius: 50px;
+        }
+
+        .switcher-btn {
+            background: none;
+            border: none;
+            padding: 6px 14px;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--color-bronze-base);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition-quick);
+        }
+
+        .switcher-btn:hover {
+            color: var(--color-gold-accent);
+        }
+
+        .switcher-btn.active {
+            background-color: var(--color-gold-accent);
+            color: var(--color-bronze-charcoal) !important;
+            box-shadow: 0 2px 8px rgba(184, 157, 108, 0.25);
+        }
+
+        /* Hide label and adjust spacing on mobile */
+        @media (max-width: 768px) {
+            .name-switcher-widget {
+                margin-left: 0;
+                margin-top: 15px;
+                padding: 3px 4px;
+            }
+            
+            .widget-label {
+                display: none;
+            }
+            
+            .switcher-btn {
+                padding: 5px 10px;
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header mit Back-Button -->
+    <header id="moodboard-header">
+        <div class="container header-flex">
+            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                <div class="brand-info">
+                    <h1 class="brand-name">ESCHEN 11</h1>
+                    <span class="sub">BRANDING MOODBOARD // SAND & BRONZE</span>
+                </div>
+                
+                <!-- Name Switcher Widget -->
+                <div class="name-switcher-widget">
+                    <span class="widget-label">Vorschlag:</span>
+                    <div class="switcher-pill">
+                        <button class="switcher-btn" data-name="RS11">RS11</button>
+                        <button class="switcher-btn active" data-name="ESCHEN 11">ESCHEN 11</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Standalone-Moodboard: Zur Landingpage ausgeblendet -->
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+
+        <!-- Sektion: Konzept-Intro -->
+        <section class="mood-section">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <span class="badge">Variante Sand & Bronze // Ausgewählt</span>
+                    <h2>Architektonische Erdung trifft edlen Metalleffekt</h2>
+                    <p class="lead">Dieses exklusive Moodboard visualisiert die vollkommene Symbiose des Objekts <span class="brand-name">ESCHEN 11</span>. Die mineralische Haptik des sandfarbenen Aussenputzes und das edle Riemenparkett im Innenraum verschmelzen mit filigranen Bronze-Balkongeländern zu einer warmen, anspruchsvollen Schweizer Wohnkultur.</p>
+                    
+                    <div class="tag-container">
+                        <span class="tag">Warmgrauer Sandstein</span>
+                        <span class="tag">Metall Bronze</span>
+                        <span class="tag">Champagner-Gold</span>
+                        <span class="tag">Walnuss Natur</span>
+                        <span class="tag">Bodenständige Eleganz</span>
+                    </div>
+                </div>
+                <div class="intro-visual">
+                    <div class="visual-wrapper">
+                        <img src="rendering_innenraum.png" alt="Exklusiver Wohnbereich ESCHEN 11 mit Nussbaumparkett und warmer Beleuchtung">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sektion: Interaktive Farbpalette -->
+        <section class="mood-section">
+            <div class="section-header">
+                <h3>Die Marken-Farbpalette</h3>
+                <p>Jeder Farbcode wurde feinsinnig auf HSL-Ebene harmonisiert. Klicken Sie auf ein Farbfeld, um den HEX-Wert direkt in Ihre Zwischenablage zu kopieren.</p>
+            </div>
+            
+            <div class="colors-grid">
+                <!-- Swatch 1: Deep Walnut / Eschenbach Bronze (Primary) -->
+                <div class="color-card" id="swatch-1" data-hex="#42312b" onclick="copyColorDynamic(1)">
+                    <div class="color-swatch" style="background-color: var(--color-bronze-base); height: 120px; position: relative;">
+                        <span class="color-hex-tag" style="position: absolute; bottom: 12px; left: 12px; background: rgba(255,255,255,0.9); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-family: monospace; font-weight: 600; color: #100d0b;">#42312b</span>
+                    </div>
+                    <div class="color-info">
+                        <span class="role">Hauptfarbe (Primary)</span>
+                        <span class="color-name">Deep Walnut (Nussbaum)</span>
+                        <p class="color-desc">Das tiefe, luxuriöse Dunkelbraun des Nussbaumparketts. Repräsentiert exklusive Wohnkultur.</p>
+                        <span class="color-origin"><i class="fa-solid fa-mountain-sun"></i> Parkett Nussbaum</span>
+                    </div>
+                </div>
+                
+                <!-- Swatch 2: Warm Sandstone / Sandbeige (Secondary) -->
+                <div class="color-card" id="swatch-2" data-hex="#cecac1" onclick="copyColorDynamic(2)">
+                    <div class="color-swatch" style="background-color: var(--color-sand-beige); height: 120px; position: relative;">
+                        <span class="color-hex-tag" style="position: absolute; bottom: 12px; left: 12px; background: rgba(255,255,255,0.9); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-family: monospace; font-weight: 600; color: #100d0b;">#cecac1</span>
+                    </div>
+                    <div class="color-info">
+                        <span class="role">Sekundärfarbe (Secondary)</span>
+                        <span class="color-name">Warm Sandstone</span>
+                        <p class="color-desc">Der edle, mineralische Beigeton des Fassadenputzes. Wirkt warm, solide und elegant.</p>
+                        <span class="color-origin"><i class="fa-solid fa-mountain-sun"></i> Aussenputz glatt</span>
+                    </div>
+                </div>
+
+                <!-- Swatch 3: Champagner-Gold / Eloxiertes Messing (Accent) -->
+                <div class="color-card" id="swatch-3" data-hex="#be8d45" onclick="copyColorDynamic(3)">
+                    <div class="color-swatch" style="background-color: var(--color-gold-accent); height: 120px; position: relative;">
+                        <span class="color-hex-tag" style="position: absolute; bottom: 12px; left: 12px; background: rgba(255,255,255,0.9); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-family: monospace; font-weight: 600; color: #100d0b;">#be8d45</span>
+                    </div>
+                    <div class="color-info">
+                        <span class="role">Akzentfarbe (Accent)</span>
+                        <span class="color-name">Champagner-Gold</span>
+                        <p class="color-desc">Ein glänzender, klassischer Goldton, abgeleitet vom Eichenholz und feinsten Messingdetails. Luxuriös und strahlend.</p>
+                        <span class="color-origin"><i class="fa-solid fa-mountain-sun"></i> Holz Eiche & Messingdetails</span>
+                    </div>
+                </div>
+
+                <!-- Swatch 4: Cremeweiß / Gebrochenes Kalkweiß (Background Light) -->
+                <div class="color-card" id="swatch-4" data-hex="#f7f4eb" onclick="copyColorDynamic(4)">
+                    <div class="color-swatch" style="background-color: var(--color-light-bg); border-bottom: 1px solid var(--color-border); height: 120px; position: relative;">
+                        <span class="color-hex-tag" style="position: absolute; bottom: 12px; left: 12px; background: rgba(255,255,255,0.9); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-family: monospace; font-weight: 600; color: #100d0b;">#f7f4eb</span>
+                    </div>
+                    <div class="color-info">
+                        <span class="role">Hintergrund hell</span>
+                        <span class="color-name">Cremeweiß (Ivory)</span>
+                        <p class="color-desc">Ein sehr warmer, cremiger Weisston für maximale Behaglichkeit und ein weiches, luxuriöses Raumgefühl.</p>
+                        <span class="color-origin"><i class="fa-solid fa-mountain-sun"></i> Bad-Wandplatten & Abrieb</span>
+                    </div>
+                </div>
+
+                <!-- Swatch 5: Ziegelrot / Kupfer-Terracotta (Contrast) -->
+                <div class="color-card" id="swatch-5" data-hex="#854c3f" onclick="copyColorDynamic(5)">
+                    <div class="color-swatch" style="background-color: var(--color-bronze-light); height: 120px; position: relative;">
+                        <span class="color-hex-tag" style="position: absolute; bottom: 12px; left: 12px; background: rgba(255,255,255,0.9); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-family: monospace; font-weight: 600; color: #100d0b;">#854c3f</span>
+                    </div>
+                    <div class="color-info">
+                        <span class="role">Kontrastfarbe</span>
+                        <span class="color-name">Ziegelrot / Terracotta</span>
+                        <p class="color-desc">Das warme Ziegelrot des klassischen Steildachs. Verbindet exklusives Wohnen mit dörflicher Geborgenheit.</p>
+                        <span class="color-origin"><i class="fa-solid fa-mountain-sun"></i> Dachziegel braun</span>
+                    </div>
+                </div>
+
+                <!-- Swatch 6: Kaviar-Schwarz / Tiefes Basaltgrau (Core Text) -->
+                <div class="color-card" id="swatch-6" data-hex="#100d0b" onclick="copyColorDynamic(6)">
+                    <div class="color-swatch" style="background-color: var(--color-bronze-charcoal); height: 120px; position: relative;">
+                        <span class="color-hex-tag" style="position: absolute; bottom: 12px; left: 12px; background: rgba(255,255,255,0.9); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-family: monospace; font-weight: 600; color: #100d0b;">#100d0b</span>
+                    </div>
+                    <div class="color-info">
+                        <span class="role">Textfarbe (Core Text)</span>
+                        <span class="color-name">Kaviar-Schwarz</span>
+                        <p class="color-desc">Ein fast schwarzes, extrem dunkles Braun aus den tiefsten Holzmaserungen für klassische Eleganz.</p>
+                        <span class="color-origin"><i class="fa-solid fa-mountain-sun"></i> Holz Ahorn & Schatten</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sektion: Materialität & Texturen -->
+        <section class="mood-section">
+            <div class="section-header">
+                <h3>Physische Haptik & Schweizer Standards</h3>
+                <p>Echte, ehrliche Materialien, die Beständigkeit und höchste Wertigkeit garantieren.</p>
+            </div>
+            
+            <div class="materials-grid">
+                <!-- Material 1: Sandstein Creme -->
+                <div class="material-card">
+                    <div class="material-preview" style="background-image: radial-gradient(circle at 50% 50%, #f7f4eb 0%, #cecac1 100%);">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <div class="material-body">
+                        <span class="material-tag">Gebäudehülle</span>
+                        <h3 class="material-title">Warmgrauer Sandstein</h3>
+                        <p class="material-desc">Ein rein mineralischer Verputz im warmen Sandsteinton, der das Sonnenlicht prachtvoll reflektiert. Witterungsbeständig und ausdrucksstark für eine repräsentative Fassade.</p>
+                        <div class="material-standard">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Schnittstellen-Qualität SIA 242</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material 2: Nussbaum-Bronze -->
+                <div class="material-card">
+                    <div class="material-preview" style="background-image: linear-gradient(135deg, #66392f 0%, #42312b 100%);">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="material-body">
+                        <span class="material-tag">Schlosserarbeiten</span>
+                        <h3 class="material-title">Walnuss-Bronzegeländer</h3>
+                        <p class="material-desc">Filigrane Balkongeländer aus Flachstahl, lackiert im satten, dunkelbraunen Bronze-Metallic (Walnusston). Sie unterstreichen den eleganten Charakter des Baukörpers.</p>
+                        <div class="material-standard">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Sicherheit gemäss Geländer-Norm SIA 358</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material 3: Nussbaum Riemenparkett -->
+                <div class="material-card">
+                    <div class="material-preview" style="background-image: linear-gradient(135deg, #42312b 0%, #221815 100%);">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <div class="material-body">
+                        <span class="material-tag">Bodenbelag innen</span>
+                        <h3 class="material-title">Riemenparkett Walnuss</h3>
+                        <p class="material-desc">Erlesenes, naturgeöltes 3-Schicht-Riemenparkett aus edler europäischer Walnuss. Bringt behagliche Naturwärme und repräsentative Grandezza in alle Räume.</p>
+                        <div class="material-standard">
+                            <i class="fa-solid fa-volume-xmark"></i>
+                            <span>Trittschallschutz SIA 181 (erhöht)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sektion: Typografie Specimen -->
+        <section class="mood-section">
+            <div class="section-header">
+                <h3>Das typografische Konzept</h3>
+                <p>Eine klassische, edle Serifenschrift harmoniert mit einer modernen, hochpräzisen Sans-Serif für optimale digitale Lesbarkeit.</p>
+            </div>
+            
+            <div class="typography-card">
+                <div class="typo-grid">
+                    <!-- Spalte 1: Überschriften -->
+                    <div class="typo-specimen">
+                        <span class="typo-label">Überschriften // Title Font</span>
+                        <h4 id="typo-title-font-name">Cormorant Garamond</h4>
+                        <div class="specimen-display">
+                            <span class="specimen-large" id="typo-specimen-large">Aa</span>
+                            <span class="specimen-alphabet" id="typo-specimen-alphabet">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Spalte 2: Standardtext -->
+                    <div class="typo-specimen body-font">
+                        <span class="typo-label">Standardtext // Body Font</span>
+                        <h4>Inter</h4>
+                        <div class="specimen-display">
+                            <span class="specimen-large">Aa</span>
+                            <span class="specimen-alphabet">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Spalte 3: Textprobe -->
+                    <div class="typo-preview">
+                        <span class="typo-label">Textprobe</span>
+                        <h3 class="preview-headline">Wertbeständigkeit, die man fühlen kann.</h3>
+                        <p class="preview-paragraph">An der Rapperswilerstrasse 11 in Eschenbach SG entsteht ein Refugium der Ruhe. Die Symbiose von warmem Sandstein, edlem Nussbaum und Champagner-Gold bildet die visuelle Signatur dieses aussergewöhnlichen Projekts. Jedes Detail zeugt von ehrlicher Handwerkskunst und technischer Weitsicht.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sektion: Live UI Mockup -->
+        <section class="mood-section">
+            <div class="section-header">
+                <h3>Digitaler Marken-Transfer</h3>
+                <p>So übersetzt sich das haptische Farb- und Typografiekonzept lückenlos und leserfreundlich in die digitale Benutzeroberfläche.</p>
+            </div>
+            
+            <div class="ui-mockup-container">
+                <div class="ui-card">
+                    <div class="ui-card-image" style="background-image: url('rendering_fassade.png');">
+                        <span class="ui-badge brand-name">ESCHEN 11</span>
+                    </div>
+                    <div class="ui-card-body">
+                        <h4 class="ui-card-title">Wohnung G (Dachgeschoss)</h4>
+                        <p class="ui-card-desc">Atemberaubende Loft-Wohnung mit sichtbaren weiss lasierten Holzpfetten, gebürstetem Nussbaumparkett und grosser Terrasse.</p>
+                        
+                        <div class="ui-card-meta">
+                            <span class="meta-item"><i class="fa-solid fa-expand"></i> 119 m² Fläche</span>
+                            <span class="meta-item"><i class="fa-solid fa-sun"></i> 24 m² Balkon</span>
+                        </div>
+                        
+                        <button class="ui-card-btn" id="simulate-click-btn">
+                            <span>Exposé anfordern</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="ui-explanation">
+                    <h4>Hierarchie und visuelle Kontraste im Web</h4>
+                    <p>Die digitale Projekt-Karte veranschaulicht die praktische Anwendung der Markenwerte:</p>
+                    <ul class="ui-explanation-list">
+                        <li><strong>Warmer Hintergrund:</strong> Die weichen, sandfarbenen Flächen verhindern die Kälte gängiger steriler Neubau-Seiten.</li>
+                        <li><strong>Bronze Charcoal für Text:</strong> Die dunkle Textfarbe hat einen warmen Braunanteil, was die Lesbarkeit verbessert und weicher wirkt.</li>
+                        <li><strong>Edles Champagner-Gold als Call-to-Action:</strong> Der Aktiv-Button leuchtet im edlen Gold-Messington und zieht die Aufmerksamkeit des Nutzers magisch an.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast-Meldung für Farbkopie -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-clipboard-check" style="color: var(--color-gold-accent);"></i>
+        <span id="toast-text">Farbcode kopiert!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer id="moodboard-footer">
+        <div class="container footer-flex">
+            <p>&copy; 2026 <span class="brand-name">ESCHEN 11</span> — MO Architektur Uznach. Alle Rechte vorbehalten.</p>
+            <p>Brand Design & Moodboard by Antigravity AI</p>
+        </div>
+    </footer>
+
+    <!-- Clipboard & Interactive Script -->
+    <script>
+        const colorPaletteData = {
+            'ESCHEN 11': [
+                {
+                    hex: '#42312b',
+                    name: 'Deep Walnut (Nussbaum)',
+                    desc: 'Das tiefe, luxuriöse Dunkelbraun des Nussbaumparketts. Repräsentiert exklusive Wohnkultur.',
+                    origin: 'Parkett Nussbaum'
+                },
+                {
+                    hex: '#cecac1',
+                    name: 'Warm Sandstone',
+                    desc: 'Der edle, mineralische Beigeton des Fassadenputzes. Wirkt warm, solide und elegant.',
+                    origin: 'Aussenputz glatt'
+                },
+                {
+                    hex: '#be8d45',
+                    name: 'Champagner-Gold',
+                    desc: 'Ein glänzender, klassischer Goldton, abgeleitet vom Eichenholz und feinsten Messingdetails. Luxuriös und strahlend.',
+                    origin: 'Holz Eiche & Messingdetails'
+                },
+                {
+                    hex: '#f7f4eb',
+                    name: 'Cremeweiß (Ivory)',
+                    desc: 'Ein sehr warmer, cremiger Weisston für maximale Behaglichkeit und ein weiches, luxuriöses Raumgefühl.',
+                    origin: 'Bad-Wandplatten & Abrieb'
+                },
+                {
+                    hex: '#854c3f',
+                    name: 'Ziegelrot / Terracotta',
+                    desc: 'Das warme Ziegelrot des klassischen Steildachs. Verbindet exklusives Wohnen mit dörflicher Geborgenheit.',
+                    origin: 'Dachziegel braun'
+                },
+                {
+                    hex: '#100d0b',
+                    name: 'Kaviar-Schwarz',
+                    desc: 'Ein fast schwarzes, extrem dunkles Braun aus den tiefsten Holzmaserungen für klassische Eleganz.',
+                    origin: 'Holz Ahorn & Schatten'
+                }
+            ],
+            'RS11': [
+                {
+                    hex: '#524434',
+                    name: 'Eschenbach Bronze',
+                    desc: 'Ein warmer, tiefer Bronzeton für Geländer und Schlosserdetails. Verleiht dem Baukörper Struktur und Eleganz.',
+                    origin: 'Geländer & Profile'
+                },
+                {
+                    hex: '#d9d5cc',
+                    name: 'Sandbeige',
+                    desc: 'Ein sandig-warmer Beige-Kalkton für die Putzfassade. Fängt das Licht weich und einladend ein.',
+                    origin: 'Aussenputz mineralisch'
+                },
+                {
+                    hex: '#998f48',
+                    name: 'Eloxiertes Messing',
+                    desc: 'Ein matter, metallischer Gold-Messington für filigrane Fensterrahmen und Akzentflächen. Modern und wertbeständig.',
+                    origin: 'Fensterprofile aussen'
+                },
+                {
+                    hex: '#f6f5f2',
+                    name: 'Gebrochenes Kalkweiß',
+                    desc: 'Ein heller, warmer Hintergrund-Farbton für Wände und Decken. Weich und tageslichtdurchflutet.',
+                    origin: 'Wandflächen & Abrieb'
+                },
+                {
+                    hex: '#854c3f',
+                    name: 'Kupfer-Terracotta',
+                    desc: 'Der mineralische Ziegelton für Dachelemente und Akzente. Schafft visuelle Erdung und Kontrast.',
+                    origin: 'Dachziegel & Spenglerarbeiten'
+                },
+                {
+                    hex: '#2d2a27',
+                    name: 'Tiefes Basaltgrau',
+                    desc: 'Ein dunkler, warmer Anthrazitton für Texte und Schattenfugen. Gewährleistet sanfte Lesekontraste.',
+                    origin: 'Holzdetails & Beschläge'
+                }
+            ]
+        };
+
+        function updateColorPaletteUI(brandName) {
+            const data = colorPaletteData[brandName];
+            if (!data) return;
+            
+            for (let i = 0; i < 6; i++) {
+                const swatchIdx = i + 1;
+                const card = document.getElementById(`swatch-${swatchIdx}`);
+                if (!card) continue;
+                
+                const item = data[i];
+                card.setAttribute('data-hex', item.hex);
+                card.querySelector('.color-hex-tag').textContent = item.hex;
+                card.querySelector('.color-name').textContent = item.name;
+                card.querySelector('.color-desc').textContent = item.desc;
+                card.querySelector('.color-origin').innerHTML = `<i class="fa-solid fa-mountain-sun"></i> ${item.origin}`;
+            }
+        }
+
+        function copyColor(hex, name) {
+            navigator.clipboard.writeText(hex).then(() => {
+                const toast = document.getElementById('toast');
+                const toastText = document.getElementById('toast-text');
+                
+                toastText.innerHTML = `Farbcode <strong>${hex}</strong> (${name}) kopiert!`;
+                toast.classList.add('show');
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }).catch(err => {
+                console.error('Fehler beim Kopieren: ', err);
+            });
+        }
+
+        function copyColorDynamic(index) {
+            const card = document.getElementById(`swatch-${index}`);
+            if (card) {
+                const hex = card.getAttribute('data-hex');
+                const name = card.querySelector('.color-name').textContent;
+                copyColor(hex, name);
+            }
+        }
+
+        // Mini-Interaktion für den Exposé-Button in der UI-Card
+        document.getElementById('simulate-click-btn').addEventListener('click', function() {
+            const btn = this;
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = `<span>Dossier wird erstellt...</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
+            btn.style.backgroundColor = 'var(--color-bronze-base)';
+            btn.style.color = 'var(--color-sand-light)';
+            
+            setTimeout(() => {
+                btn.innerHTML = `<span>Dossier gesendet! ✓</span>`;
+                btn.style.backgroundColor = 'var(--color-gold-accent)';
+                btn.style.color = 'var(--color-bronze-charcoal)';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            }, 1200);
+        });
+
+        // Standard-Klasse für Schriftart initialisieren
+        document.body.classList.add('brand-eschen11');
+        updateColorPaletteUI('ESCHEN 11');
+
+        // Name Switcher Logik (RS11 vs ESCHEN 11)
+        const switcherBtns = document.querySelectorAll('.switcher-btn');
+        const brandNameElements = document.querySelectorAll('.brand-name');
+
+        switcherBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const selectedName = btn.getAttribute('data-name');
+
+                // Dynamische Schriftart-Klasse auf body anwenden & Typo-Specimen Label aktualisieren
+                const titleFontNameElement = document.getElementById('typo-title-font-name');
+                if (selectedName === 'RS11') {
+                    document.body.classList.remove('brand-eschen11');
+                    document.body.classList.add('brand-rs11');
+                    if (titleFontNameElement) {
+                        titleFontNameElement.textContent = 'Playfair Display';
+                    }
+                    updateColorPaletteUI('RS11');
+                } else {
+                    document.body.classList.remove('brand-rs11');
+                    document.body.classList.add('brand-eschen11');
+                    if (titleFontNameElement) {
+                        titleFontNameElement.textContent = 'Cormorant Garamond';
+                    }
+                    updateColorPaletteUI('ESCHEN 11');
+                }
+
+                // Button Klasse umschalten
+                switcherBtns.forEach(b => b.classList.remove('active'));
+                
+                // Synchronisiere alle Switcher-Buttons mit demselben Namen
+                document.querySelectorAll(`.switcher-btn[data-name="${selectedName}"]`).forEach(b => b.classList.add('active'));
+                document.querySelectorAll(`.switcher-btn:not([data-name="${selectedName}"])`).forEach(b => b.classList.remove('active'));
+
+                // Alle Brandnamen aktualisieren
+                brandNameElements.forEach(el => {
+                    el.textContent = selectedName;
+                });
+
+                // Titel aktualisieren
+                if (document.title.includes('RS11')) {
+                    document.title = document.title.replace('RS11', selectedName);
+                } else if (document.title.includes('ESCHEN 11')) {
+                    document.title = document.title.replace('ESCHEN 11', selectedName);
+                }
+            });
+        });
+
+        // URL-Parameter Check, um direkt die richtige Variante zu laden (z.B. für PDF-Generierung)
+        const urlParams = new URLSearchParams(window.location.search);
+        const queryName = urlParams.get('name') || urlParams.get('brand');
+        if (queryName) {
+            const cleanName = queryName.trim().toUpperCase();
+            if (cleanName === 'RS11' || cleanName === 'RS 11') {
+                const rsBtn = document.querySelector('.switcher-btn[data-name="RS11"]');
+                if (rsBtn) rsBtn.click();
+            } else if (cleanName === 'ESCHEN11' || cleanName === 'ESCHEN 11') {
+                const eschenBtn = document.querySelector('.switcher-btn[data-name="ESCHEN 11"]');
+                if (eschenBtn) eschenBtn.click();
+            }
+        }
+    </script>
+</body>
+</html>
