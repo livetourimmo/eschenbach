@@ -211,14 +211,14 @@
             color: var(--color-accent);
         }
 
-        /* 1. Hero Section & Concept Card Selector Combined */
+        /* 1. Hero Section - Compact Visual & Intro Layout */
         #mood-hero {
             position: relative;
-            padding: 80px 0;
+            padding: 40px 0;
             background-color: #1a1715;
             color: #ffffff;
             overflow: hidden;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
 
         .hero-bg-overlay {
@@ -236,56 +236,21 @@
             z-index: 2;
         }
 
-        .hero-badge {
-            display: inline-block;
-            font-size: 0.8rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--color-accent);
-            margin-bottom: 16px;
-            font-weight: 600;
-        }
-
-        .hero-main-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            line-height: 1.2;
-            margin-bottom: 30px;
-            color: #ffffff;
-        }
-
-        .hero-main-title .text-accent {
-            color: var(--color-accent);
-            font-style: var(--font-title-style);
-        }
-
-        /* Combined Grid Layout */
         .hero-content-grid {
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 40px;
-            align-items: stretch;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
         }
 
-        /* Left Side: Visual & Intro Card (Glassmorphic) */
-        .hero-intro-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-
+        /* Left Side: Visual Representation */
         .hero-visual-wrapper {
-            border-radius: calc(var(--border-radius) - 4px);
+            border-radius: var(--border-radius);
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             aspect-ratio: 16 / 10;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
         }
 
         .hero-visual-wrapper img {
@@ -300,18 +265,38 @@
             transform: scale(1.04);
         }
 
+        /* Right Side: Fact-Based Intro Text */
         .hero-intro-text {
             display: flex;
             flex-direction: column;
+            gap: 12px;
         }
 
         .hero-intro-text .badge {
             display: inline-block;
+            align-self: flex-start;
             font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: var(--color-accent);
+            margin-bottom: 4px;
+        }
+
+        .hero-intro-text h2 {
+            color: #ffffff;
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            line-height: 1.15;
+            font-family: var(--font-serif);
+            font-style: var(--font-title-style);
+            margin-bottom: 8px;
+        }
+
+        .hero-intro-text p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            font-weight: 300;
             margin-bottom: 8px;
         }
 
@@ -319,7 +304,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: 14px;
+            margin-top: 8px;
         }
 
         .tag {
@@ -333,138 +318,9 @@
             transition: var(--transition-smooth);
         }
 
-        /* Right Side: Selector Column */
-        .hero-selector-column {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        .selector-title {
-            font-size: 1.15rem;
-            margin-bottom: 16px;
-            letter-spacing: 1px;
-            color: rgba(255, 255, 255, 0.9);
-            font-family: var(--font-serif);
-        }
-
-        .concept-cards-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .concept-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: var(--border-radius);
-            padding: 20px;
-            cursor: pointer;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            transition: var(--transition-smooth);
-        }
-
-        .concept-card:hover {
-            transform: translateY(-4px);
-            background: rgba(255, 255, 255, 0.07);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-        }
-
-        .concept-card.active {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--color-accent);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .concept-card.active::before {
-            content: "";
-            position: absolute;
-            top: -1px;
-            left: -1px;
-            right: -1px;
-            bottom: -1px;
-            border: 2px solid var(--color-accent);
-            border-radius: var(--border-radius);
-            pointer-events: none;
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .card-num {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--color-accent);
-            opacity: 0.8;
-        }
-
-        .concept-card h4 {
-            font-size: 1.1rem;
-            color: #ffffff;
-            font-weight: 500;
-            font-family: var(--font-sans);
-        }
-
-        .card-desc {
-            font-size: 0.8rem;
-            line-height: 1.4;
-            color: rgba(255, 255, 255, 0.65);
-        }
-
-        .card-visuals {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 10px;
-            margin-top: 2px;
-        }
-
-        .card-colors {
-            display: flex;
-            gap: 6px;
-        }
-
-        .card-colors .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            display: block;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .card-font {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: rgba(255, 255, 255, 0.4);
-            font-weight: 500;
-        }
-
-        .card-status-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 0.6rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--color-accent);
-            font-weight: 600;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 2px 6px;
-            border-radius: 50px;
-        }
-
         /* Sections */
         .mood-section {
-            padding: 60px 0 30px;
+            padding: 50px 0 25px;
             border-bottom: 1px solid var(--color-border);
             animation: fadeIn 0.8s ease-out;
         }
@@ -479,13 +335,13 @@
         }
 
         .section-header {
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .section-header h3 {
             font-size: 1.8rem;
             color: var(--color-primary);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .section-header p {
@@ -501,7 +357,7 @@
             text-transform: uppercase;
             letter-spacing: 0.12em;
             color: var(--color-accent);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         /* Farbpalette Grid */
@@ -1099,77 +955,34 @@
             <div class="variant-switcher" role="tablist">
                 <button class="header-switcher-btn active" data-variant="RS11" role="tab" aria-selected="true" id="tab-v1">
                     <span class="num">01</span>
-                    <span class="name">Bodenständige Eleganz (RS11)</span>
+                    <span class="name">Materialkonzept RS11 (Eiche / Messing-Eloxal)</span>
                 </button>
                 <button class="header-switcher-btn" data-variant="ESCHEN 11" role="tab" aria-selected="false" id="tab-v2">
                     <span class="num">02</span>
-                    <span class="name">Prestigeträchtige Residenz (ESCHEN 11)</span>
+                    <span class="name">Materialkonzept ESCHEN 11 (Nussbaum / Champagner-Gold)</span>
                 </button>
+            </div>
         </div>
     </header>
 
-    <!-- 1. Hero-Bereich mit Einleitung und integriertem Konzeptkarten-Switcher -->
+    <!-- 1. Hero-Bereich mit Visualisierung und kompakter Einleitung -->
     <section id="mood-hero">
         <div class="hero-bg-overlay"></div>
         <div class="container hero-wrapper">
-            <span class="badge hero-badge">Offizielles Brandingkonzept — Rapperswilerstrasse 11</span>
-            <h1 class="hero-main-title">Architektur im Einklang mit <br><span class="text-accent" id="hero-dynamic-title">Marke & Material</span></h1>
-            
             <div class="hero-content-grid">
-                <!-- Linke Spalte: Visualisierung & Einleitung -->
-                <div class="hero-intro-card">
-                    <div class="hero-visual-wrapper">
-                        <img src="rendering_innenraum.png" alt="Exklusiver Wohnbereich" id="mood-main-image">
-                    </div>
-                    <div class="hero-intro-text">
-                        <span class="badge" id="intro-badge">Variante 01 // Favorit</span>
-                        <h2 id="intro-title" style="color: #ffffff; margin-bottom: 8px; font-size: 1.6rem; font-family: var(--font-serif);">Bodenständige Eleganz</h2>
-                        <p id="intro-lead" style="color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; line-height: 1.5; font-weight: 300;">Dieses Konzept feiert das ehrliche Zusammenspiel aus feinem Eichenholz, sandfarbenem Verputz und den edlen eloxierten Messingfenstern. Schweizer Understatement – zeitlos, warm und wertbeständig.</p>
-                        
-                        <div class="tag-container" id="intro-tags">
-                            <!-- Wird dynamisch befüllt -->
-                        </div>
-                    </div>
+                <!-- Linke Spalte: Visualisierung -->
+                <div class="hero-visual-wrapper">
+                    <img src="rendering_innenraum.png" alt="Architektur Visualisierung" id="mood-main-image">
                 </div>
                 
-                <!-- Rechte Spalte: Konzeptauswahl -->
-                <div class="hero-selector-column">
-                    <h3 class="selector-title">Markenkonzept wählen:</h3>
-                    <div class="concept-cards-stack">
-                        <!-- Karte 1: RS11 / Bodenständige Eleganz -->
-                        <div class="concept-card active" data-variant="RS11" id="card-v1">
-                            <div class="card-header">
-                                <span class="card-num">01</span>
-                                <h4>Bodenständige Eleganz (RS11)</h4>
-                            </div>
-                            <p class="card-desc">Warmes Schweizer Understatement. Eichenholz, sandfarbener Verputz und fein eloxiertes Messing.</p>
-                            <div class="card-visuals">
-                                <div class="card-colors">
-                                    <span class="dot" style="background-color: #524434;" title="Bronze"></span>
-                                    <span class="dot" style="background-color: #D9D5CC;" title="Sandbeige"></span>
-                                    <span class="dot" style="background-color: #998F48;" title="Messing"></span>
-                                </div>
-                                <span class="card-font">Playfair / Inter</span>
-                            </div>
-                            <span class="card-status-badge">Unser Favorit</span>
-                        </div>
-                        
-                        <!-- Karte 2: ESCHEN 11 / Prestigeträchtige Residenz -->
-                        <div class="concept-card" data-variant="ESCHEN 11" id="card-v2">
-                            <div class="card-header">
-                                <span class="card-num">02</span>
-                                <h4>Prestigeträchtige Residenz (ESCHEN 11)</h4>
-                            </div>
-                            <p class="card-desc">Repräsentatives Erbe. Tiefdunkles Nussbaumparkett, warmer Sandstein und Champagner-Gold.</p>
-                            <div class="card-visuals">
-                                <div class="card-colors">
-                                    <span class="dot" style="background-color: #42312B;" title="Nussbaum"></span>
-                                    <span class="dot" style="background-color: #CECAC1;" title="Sandstone"></span>
-                                    <span class="dot" style="background-color: #BE8D45;" title="Gold"></span>
-                                </div>
-                                <span class="card-font">Cormorant / Inter</span>
-                            </div>
-                        </div>
+                <!-- Rechte Spalte: Einleitung -->
+                <div class="hero-intro-text">
+                    <span class="badge" id="intro-badge">Konzept 01 // Favorit</span>
+                    <h2 id="intro-title">Materialkonzept RS11 (Eiche / Messing-Eloxal)</h2>
+                    <p id="intro-lead">Kombination aus naturbelassenem Eichenholz, sandfarbenem mineralischem Aussenputz und eloxiertem Messing.</p>
+                    
+                    <div class="tag-container" id="intro-tags">
+                        <!-- Wird dynamisch befüllt -->
                     </div>
                 </div>
             </div>
@@ -1260,7 +1073,7 @@
         <section class="mood-section" id="mood-typography">
             <div class="section-header">
                 <h3>Das typografische Konzept</h3>
-                <p>Das Schriftsystem prägt den gestalterischen Charakter der Marke Eschenbach.</p>
+                <p>Schnittstellen der Typografie im Aussen- und Innenbereich.</p>
             </div>
             
             <div class="typography-card">
@@ -1275,18 +1088,18 @@
                     </div>
                     <div class="typo-preview">
                         <span class="typo-label">Live-Schriftmuster</span>
-                        <h3 class="preview-headline" id="typo-preview-headline">Ein neues Kapitel des Wohnens.</h3>
-                        <p class="preview-paragraph" id="typo-preview-paragraph">Die Symbiose von Tradition und Moderne schafft an der Rapperswilerstrasse 11 einen Ort der Ruhe. Die sorgfältig ausgewählten Materialien atmen ehrliches Handwerk und Schweizer Präzision.</p>
+                        <h3 class="preview-headline" id="typo-preview-headline">Materialkonzept RS11 (Eiche / Messing-Eloxal)</h3>
+                        <p class="preview-paragraph" id="typo-preview-paragraph">Die architektonische Ausarbeitung an der Rapperswilerstrasse 11 kombiniert mineralische Verputze mit massivem Holz und eloxierten Metallelementen.</p>
                     </div>
                 </div>
             </div>
         </section>
-
+ 
         <!-- 4. Sektion: Beispiel-Sektion mit Live UI- & Button-Vorschau -->
         <section class="mood-section" id="mood-ui">
             <div class="section-header">
                 <h3>Live UI- & Button-Vorschau</h3>
-                <p>Dieses interaktive Mockup zeigt die Übersetzung der Farb- und Typografieelemente in digitale Interfaces.</p>
+                <p>Darstellung der Farb- und Typografieelemente in einer exemplarischen Benutzeroberfläche.</p>
             </div>
             
             <div class="ui-mockup-grid">
@@ -1299,7 +1112,7 @@
                         </div>
                         <div class="ui-card-body">
                             <h4 class="ui-card-title" id="ui-card-title">Wohnung G (Dachgeschoss)</h4>
-                            <p class="ui-card-desc" id="ui-card-desc">Atemberaubende Loft-Wohnung mit sichtbaren weiss lasierten Holzpfetten, gebürstetem Parkett und grosser Terrasse.</p>
+                            <p class="ui-card-desc" id="ui-card-desc">Loft-Wohnung mit sichtbaren weiss lasierten Holzpfetten, gebürstetem Parkett und schwellenlosem Terrassenaustritt.</p>
                             
                             <div class="ui-card-meta">
                                 <span class="meta-item"><i class="fa-solid fa-expand"></i> 119 m² Wohnfläche</span>
@@ -1317,8 +1130,8 @@
                 <div class="button-showcase-container">
                     <span class="ui-block-label">Digitale Button-Strukturen</span>
                     <div class="button-explanation-card">
-                        <h4>Materialität im digitalen Raum</h4>
-                        <p class="btn-intro-text">Die Buttons spiegeln die haptische Eleganz des Bauwerks wider und sind direkt aus den echten Baustoffen abgeleitet:</p>
+                        <h4>Farbdefinition der Bedienelemente</h4>
+                        <p class="btn-intro-text">Die Farbcodierung der Bedienelemente leitet sich direkt aus den physikalischen Werkstoffen des Baukörpers ab:</p>
                         
                         <div class="showcase-buttons-stack">
                             <!-- Primary Button -->
@@ -1331,7 +1144,7 @@
                                     <p class="btn-desc" id="btn-primary-desc">Dunkler Bronzeton der Geländer. Weich, solide, mit unaufdringlichem Kontrast.</p>
                                 </div>
                             </div>
-
+ 
                             <!-- Secondary Button -->
                             <div class="btn-showcase-item">
                                 <div class="btn-column">
@@ -1342,7 +1155,7 @@
                                     <p class="btn-desc" id="btn-secondary-desc">Feiner Sandstein-Beigeton. Wirkt leicht, mineralisch und harmonisch zurückhaltend.</p>
                                 </div>
                             </div>
-
+ 
                             <!-- Accent Button -->
                             <div class="btn-showcase-item">
                                 <div class="btn-column">
@@ -1358,12 +1171,12 @@
                 </div>
             </div>
         </section>
-
+ 
         <!-- 5. Sektion: Darstellung des Brandingnamens -->
         <section class="mood-section" id="mood-branding-showcase">
             <div class="section-header">
                 <h3>Brandingname & Slogan</h3>
-                <p>Die offizielle Wortmarke mit zugehöriger typografischer Ausprägung und exklusivem Projektslogan.</p>
+                <p>Darstellung des Projektnamens und der primären Leitlinie.</p>
             </div>
             
             <div class="branding-name-card">
@@ -1371,7 +1184,7 @@
                     <span class="branding-category">Wortmarke & Slogan</span>
                     <h2 class="branding-name-large brand-name" id="brand-showcase-name">RS11</h2>
                     <div class="branding-slogan-line"></div>
-                    <p class="branding-slogan" id="brand-showcase-slogan">Wo architecture auf edle Details trifft.</p>
+                    <p class="branding-slogan" id="brand-showcase-slogan">Materialfokus und konstruktive Präzision.</p>
                 </div>
             </div>
         </section>
@@ -1398,62 +1211,62 @@
         const brandingData = {
             'RS11': {
                 badge: 'Konzept 01 // Favorit',
-                title: 'Bodenständige Eleganz',
-                lead: 'Kombination aus feinem Eichenholz, sandfarbenem Putz und eloxiertem Messing. Warmes Schweizer Understatement – zeitlos und natürlich.',
+                title: 'Materialkonzept RS11 (Eiche / Messing-Eloxal)',
+                lead: 'Kombination aus naturbelassenem Eichenholz, sandfarbenem mineralischem Aussenputz und eloxiertem Messing.',
                 brandName: 'RS11',
-                brandSlogan: 'Architektur im Fokus edler Details.',
-                tags: ['Eiche Natur', 'Eloxiertes Messing', 'Sandbeige', 'Bodenständige Eleganz'],
+                brandSlogan: 'Materialfokus und konstruktive Präzision.',
+                tags: ['Eiche Natur', 'Eloxiertes Messing', 'Sandbeige', 'Mineralputz'],
                 titleFont: 'Playfair Display',
                 specimenLarge: 'Aa',
                 specimenAlphabet: 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z',
-                previewHeadline: 'Ein neues Kapitel des Wohnens.',
-                previewParagraph: 'Die Symbiose von Tradition und Moderne schafft an der Rapperswilerstrasse 11 einen Ort der Ruhe. Die sorgfältig ausgewählten Materialien atmen ehrliche Solidität.',
+                previewHeadline: 'Strukturelle Materialfügung.',
+                previewParagraph: 'Die Detaillierung kombiniert mineralische Verputze mit massiven Holzbauteilen und eloxierten Aluminiumprofilen zur Gewährleistung dauerhafter Witterungsbeständigkeit.',
                 
-                // Buttons Showcase Descriptions
+                // Buttons Showcase Descriptions (Static Labels in HTML)
                 buttons: {
-                    primary: { desc: 'Passend zum dunklen Bronzeton der Balkongeländer. Solide und kontrastreich.' },
-                    secondary: { desc: 'Entspricht dem hellen Sandstein-Fassadenton. Harmonisch zurückhaltend.' },
-                    accent: { desc: 'Orientiert am warmen Eloxal-Messington der Holz-Metall-Fensterrahmen.' }
+                    primary: { desc: 'Farbton für pulverbeschichtete Metallprofile und Geländer.' },
+                    secondary: { desc: 'Entspricht dem mineralischen Aussenputz der Fassadenhauptfläche.' },
+                    accent: { desc: 'Orientiert am eloxierten Messington der Holz-Metall-Fensterprofile.' }
                 },
                 
-                // Farbpalette
+                // Farbpalette (Faktenbasiert & Technisch)
                 colors: [
-                    { name: 'Eschenbach Bronze', hex: '#524434', role: 'Hauptfarbe (Primary)', desc: 'Vom dunklen Strukturputz und den Fensterrahmen. Edler als reines Schwarz.', origin: 'Balkongeländer & Details' },
-                    { name: 'Mineralisches Sandbeige', hex: '#D9D5CC', role: 'Sekundärfarbe (Secondary)', desc: 'Entspricht dem sandfarbenen Putz der Hauptfassade für eine warme Optik.', origin: 'Haupt-Aussenfassade' },
-                    { name: 'Eloxiertes Messing', hex: '#998F48', role: 'Akzentfarbe (Accent)', desc: 'Der metallische Glanzpunkt an den Holz-Metall-Fenstern und Portalen.', origin: 'Holz-Metall-Fenster' },
-                    { name: 'Gebrochenes Kalkweiss', hex: '#F6F5F2', role: 'Hintergrund hell', desc: 'Warme Aufhellung der Wände im Innenbereich. Verhindert sterile Optik.', origin: 'Innenwände & Wandabrieb' },
-                    { name: 'Kupfer-Terracotta', hex: '#854C3F', role: 'Kontrastfarbe', desc: 'Abgeleitet von den Kupferelementen der Dachlukarnen und Dachziegel.', origin: 'Dachziegel & Lukarnenbleche' },
-                    { name: 'Tiefes Basaltgrau', hex: '#2D2A27', role: 'Textfarbe (Core Text)', desc: 'Dunkles Schattengrau aus der Eichenholzmaserung für perfekten Kontrast.', origin: 'Eichenparkett & Basaltplatten' }
+                    { name: 'Eschenbach Bronze', hex: '#524434', role: 'Hauptfarbe (Primary)', desc: 'Farbton für beschichtete Geländer und Metallprofile. Alternative zu Schwarz.', origin: 'Balkongeländer & Profile' },
+                    { name: 'Mineralisches Sandbeige', hex: '#D9D5CC', role: 'Sekundärfarbe (Secondary)', desc: 'Entspricht dem sandfarbenen mineralischen Aussenputz der Hauptfassade.', origin: 'Haupt-Aussenfassade' },
+                    { name: 'Eloxiertes Messing', hex: '#998F48', role: 'Akzentfarbe (Accent)', desc: 'Akzentton der eloxierten Aluminium-Fensterrahmen und Aussenportale.', origin: 'Holz-Metall-Fenster' },
+                    { name: 'Gebrochenes Kalkweiss', hex: '#F6F5F2', role: 'Hintergrund hell', desc: 'Warmer Weissgrad für den Innenputz zur Vermeidung hoher Kontraste.', origin: 'Innenwände & Wandabrieb' },
+                    { name: 'Kupfer-Terracotta', hex: '#854C3F', role: 'Kontrastfarbe', desc: 'Farbwert abgeleitet von den Kupferelementen der Dachlukarnen und Ziegel.', origin: 'Dachziegel & Lukarnenbleche' },
+                    { name: 'Tiefes Basaltgrau', hex: '#2D2A27', role: 'Textfarbe (Core Text)', desc: 'Dunkles Grau aus der Eichenholz-Maserung und den Aussenbodenplatten.', origin: 'Eichenparkett & Basaltplatten' }
                 ]
             },
             'ESCHEN 11': {
                 badge: 'Konzept 02 // Residenz',
-                title: 'Prestigeträchtige Residenz',
-                lead: 'Tiefes Nussbaumbraun, mineralischer Sandstein und warmglänzendes Champagner-Gold. Schweizer Residenz-Stil von zeitlosem Luxus.',
+                title: 'Materialkonzept ESCHEN 11 (Nussbaum / Champagner-Gold)',
+                lead: 'Kombination aus dunklem Nussbaumholz, geschliffenem Sandstein und champagnergoldenen Metallelementen.',
                 brandName: 'ESCHEN 11',
-                brandSlogan: 'Ein Wohntraum voll erlesener Tradition.',
-                tags: ['Klassischer Sandstein', 'Walnuss Natur', 'Champagner-Gold', 'Klassische Residenz'],
+                brandSlogan: 'Symmetrie und selektierte Materialkontraste.',
+                tags: ['Sandstein', 'Nussbaum Natur', 'Champagner-Gold', 'Kompakte Textur'],
                 titleFont: 'Cormorant Garamond',
                 specimenLarge: 'Aa',
                 specimenAlphabet: 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z',
-                previewHeadline: 'Ein Erbe von zeitlosem Wert.',
-                previewParagraph: 'Exklusivität bedeutet, edle Materialien in ihrer reinsten Form wirken zu lassen. Nussbaum und Champagner-Gold schaffen eine repräsentative Atmosphäre.',
+                previewHeadline: 'Klassische Materialfügung.',
+                previewParagraph: 'Einsatz von massivem Nussbaumholz im Innenbereich und geschliffenem Sandstein an der Fassade. Die Metallelemente in Champagnergold definieren präzise Übergänge an Fugen und Profilen.',
                 
-                // Buttons Showcase Descriptions
+                // Buttons Showcase Descriptions (Static Labels in HTML)
                 buttons: {
-                    primary: { desc: 'Abgestimmt auf das edle Dunkelbraun des amerikanischen Nussbaumparketts.' },
-                    secondary: { desc: 'Basiert auf dem warmen Beigeton der mineralischen Sockelelemente.' },
-                    accent: { desc: 'Orientiert an den PVD-beschichteten Premium-Badezimmerarmaturen.' }
+                    primary: { desc: 'Farbwert des Nussbaumparketts im Innenbereich.' },
+                    secondary: { desc: 'Natursteinton der Sockel- und Bodenplatten.' },
+                    accent: { desc: 'Metallischer Akzentton der Armaturen und Profile.' }
                 },
                 
-                // Farbpalette
+                // Farbpalette (Faktenbasiert & Technisch)
                 colors: [
-                    { name: 'Deep Walnut (Nussbaum)', hex: '#42312B', role: 'Hauptfarbe (Primary)', desc: 'Das edle Dunkelbraun des Nussbaumparketts. Luxuriöse Schweizer Wohnkultur.', origin: 'Parkett Nussbaum' },
-                    { name: 'Warm Sandstone', hex: '#CECAC1', role: 'Sekundärfarbe (Secondary)', desc: 'Mineralischer Beigeton des Sockelputzes. Wirkt feingliedrig und solide.', origin: 'Aussenputz glatt' },
-                    { name: 'Champagner-Gold', hex: '#BE8D45', role: 'Akzentfarbe (Accent)', desc: 'Warmglänzender Premiumton der Armaturen und metallischen Details.', origin: 'PVD-Messingarmaturen' },
-                    { name: 'Cremeweiß (Ivory)', hex: '#F7F4EB', role: 'Hintergrund hell', desc: 'Sanfter, cremiger Weißton für ein luxuriöses, helles Raumgefühl.', origin: 'Bad-Wandplatten & Abrieb' },
-                    { name: 'Ziegelrot / Terracotta', hex: '#854C3F', role: 'Kontrastfarbe', desc: 'Warmes Rotton des Steildachs. Verbindet Moderne mit Geborgenheit.', origin: 'Dachziegel braun' },
-                    { name: 'Kaviar-Schwarz', hex: '#100D0B', role: 'Textfarbe (Core Text)', desc: 'Fast schwarzer Braunton aus den Nussbaum-Maserungen für Textdetails.', origin: 'Holz Nussbaum & Schattenspiel' }
+                    { name: 'Deep Walnut (Nussbaum)', hex: '#42312B', role: 'Hauptfarbe (Primary)', desc: 'Dunkelbrauner Holzton des Nussbaumparketts für den Innenbereich.', origin: 'Parkett Nussbaum' },
+                    { name: 'Warm Sandstone', hex: '#CECAC1', role: 'Sekundärfarbe (Secondary)', desc: 'Mineralischer Beigeton des sandgestrahlten Sockelputzes.', origin: 'Aussenputz glatt' },
+                    { name: 'Champagner-Gold', hex: '#BE8D45', role: 'Akzentfarbe (Accent)', desc: 'Warmtonig eloxiertes Metall für Sanitärarmaturen und Zierprofile.', origin: 'PVD-Messingarmaturen' },
+                    { name: 'Cremeweiß (Ivory)', hex: '#F7F4EB', role: 'Hintergrund hell', desc: 'Ivory-Ton für Fliesen und Wände zur weichen Lichtreflexion.', origin: 'Bad-Wandplatten & Abrieb' },
+                    { name: 'Ziegelrot / Terracotta', hex: '#854C3F', role: 'Kontrastfarbe', desc: 'Klassischer Rotton der Ton-Dachziegel.', origin: 'Dachziegel braun' },
+                    { name: 'Kaviar-Schwarz', hex: '#100D0B', role: 'Textfarbe (Core Text)', desc: 'Kernschwarz der Nussbaum-Maserung für kontrastreiche Fugen.', origin: 'Holz Nussbaum & Schattenspiel' }
                 ]
             }
         };
@@ -1538,11 +1351,11 @@
             // F. Update UI Preview Card details
             const uiTitle = document.getElementById('ui-card-title');
             const uiDesc = document.getElementById('ui-card-desc');
-            if (uiTitle) uiTitle.textContent = brandName === 'RS11' ? 'Wohnung G (Dachgeschoss)' : 'Residenz G (Penthouse)';
+            if (uiTitle) uiTitle.textContent = brandName === 'RS11' ? 'Wohnung RS11 (Regulär)' : 'Residenz ESCHEN 11 (Premium)';
             if (uiDesc) {
                 uiDesc.textContent = brandName === 'RS11' 
-                    ? 'Atemberaubende Loft-Wohnung mit sichtbaren weiss lasierten Holzpfetten, gebürstetem Eichenparkett und grosser Terrasse.'
-                    : 'Atemberaubende Penthouse-Suite mit sichtbaren Holzpfetten, edlem geöltem Nussbaumparkett und grosser Dachterrasse.';
+                    ? 'Wohnungseinheit mit Eichenholzparkett, mineralisch verputzten Wänden und Balkonelementen aus pulverbeschichteter Bronze.'
+                    : 'Wohnungseinheit mit Fischgrat-Nussbaumparkett, geschliffenen Natursteinflächen und Sanitärausstattung in Champagner-Gold.';
             }
 
             // G. Update Button Showcase Descriptions
@@ -1588,17 +1401,12 @@
             }
         }
 
-        // --- 4. Switcher-Logik (Mit dualer Synchronisation) ---
+        // --- 4. Switcher-Logik ---
         function selectVariant(variantKey) {
             document.querySelectorAll('.header-switcher-btn').forEach(btn => {
                 const active = btn.getAttribute('data-variant') === variantKey;
                 btn.classList.toggle('active', active);
                 btn.setAttribute('aria-selected', active ? 'true' : 'false');
-            });
-
-            document.querySelectorAll('.concept-card').forEach(card => {
-                const active = card.getAttribute('data-variant') === variantKey;
-                card.classList.toggle('active', active);
             });
 
             const mainContent = document.getElementById('moodboard-content');
@@ -1616,7 +1424,7 @@
                 renderMoodboard(variantKey);
             }
 
-            document.title = `Interaktives Brand Moodboard — ${variantKey}`;
+            document.title = `Brand Moodboard — ${variantKey}`;
             
             const mainImg = document.getElementById('mood-main-image');
             if (mainImg) {
@@ -1628,18 +1436,6 @@
             button.addEventListener('click', () => {
                 const variantKey = button.getAttribute('data-variant');
                 selectVariant(variantKey);
-            });
-        });
-
-        document.querySelectorAll('.concept-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const variantKey = card.getAttribute('data-variant');
-                selectVariant(variantKey);
-                
-                const contentStart = document.getElementById('mood-colors');
-                if (contentStart) {
-                    contentStart.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
             });
         });
 
@@ -1661,6 +1457,7 @@
             });
         }
 
+        // --- 5. Initiales Rendern (RS11) ---
         selectVariant('RS11');
 
     </script>
