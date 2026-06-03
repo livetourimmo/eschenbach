@@ -33,30 +33,30 @@
             --color-text-core: #2d2a27;       /* Tiefes Basaltgrau */
             --color-text-light: #4c4742;      
             
-            --color-primary: #524434;         /* Eschenbach Bronze */
+            --color-primary: #524434;         /* Dunkelbronze */
             --color-secondary: #d9d5cc;       /* Sandbeige */
-            --color-accent: #998f48;          /* Eloxiertes Messing */
+            --color-accent: #998f48;          /* Messing-Gold */
             --color-accent-hover: #81783c;
-            --color-contrast: #8c8c8c;        /* Dunkelgrau Ziegeldach */
+            --color-contrast: #8c8c8c;        /* Dunkelgrau */
             
             --font-serif: 'Playfair Display', Georgia, serif;
             --border-radius: 8px;
             --font-title-style: normal;
         }
 
-        /* Variante 2: ESCHEN 11 (Prestigeträchtige Residenz) */
+        /* Variante 2: ESCHEN 11 (Premium-Konzept) */
         body.brand-eschen11 {
             --bg-page: #f7f4eb;               /* Cremeweiss / Ivory */
             --color-card-bg: #ffffff;
             --color-border: rgba(82, 68, 52, 0.12);
             --color-text-core: #100d0b;       /* Kaviar-Schwarz */
-            --color-text-light: #42312b;      /* Dunkelbraun (Innentüren & Einbauten) */
+            --color-text-light: #42312b;      /* Dunkelbraun */
             
-            --color-primary: #42312b;         /* Dunkelbraun (Innentüren & Einbauten) */
-            --color-secondary: #cecac1;       /* Warm Sandstone */
-            --color-accent: #4e4843;          /* Kupfer-Dunkelgrau Metalldach/rinnen */
+            --color-primary: #42312b;         /* Dunkelbraun */
+            --color-secondary: #cecac1;       /* Warmes Sandbeige */
+            --color-accent: #4e4843;          /* Kupfer-Dunkelgrau */
             --color-accent-hover: #3c3733;
-            --color-contrast: #817865;        /* Dunkel Warmgrau grob */
+            --color-contrast: #817865;        /* Dunkel-Warmgrau */
             
             --font-serif: 'Cormorant Garamond', Georgia, serif;
             --border-radius: 16px;            /* Weicher, geschwungener Look */
@@ -894,6 +894,57 @@
             opacity: 0.8;
         }
 
+        /* Neu: Kontrast-Färbung für bestimmte Sektionen (z.B. Typografie) */
+        section.mood-contrast-section {
+            background-color: var(--color-contrast);
+            color: #ffffff;
+            padding: 70px 0;
+            margin: 50px 0;
+            transition: background-color 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        section.mood-contrast-section .section-header h3 {
+            color: #ffffff;
+        }
+
+        section.mood-contrast-section .section-header p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        section.mood-contrast-section .typography-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
+
+        section.mood-contrast-section h4,
+        section.mood-contrast-section .preview-headline {
+            color: #ffffff !important;
+        }
+
+        section.mood-contrast-section .typo-label {
+            color: var(--color-secondary);
+            opacity: 0.9;
+        }
+
+        section.mood-contrast-section .specimen-display {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.6s ease;
+        }
+
+        section.mood-contrast-section .specimen-large {
+            color: #ffffff;
+        }
+
+        section.mood-contrast-section .specimen-alphabet {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        section.mood-contrast-section .preview-paragraph {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+
         /* Responsive styling */
         @media (max-width: 1024px) {
             .hero-content-grid {
@@ -1013,8 +1064,8 @@
                 <!-- Rechte Spalte: Einleitung -->
                 <div class="hero-intro-text">
                     <span class="badge" id="intro-badge">Konzept 01 // Favorit</span>
-                    <h2 id="intro-title">Materialkonzept RS11</h2>
-                    <p id="intro-lead">Kombination aus naturbelassenem Eichenholz, sandfarbenem mineralischem Aussenputz und eloxiertem Messing.</p>
+                    <h2 id="intro-title">Farbkonzept RS11</h2>
+                    <p id="intro-lead">Kombination aus warmen Holztönen, sandigem Beige und edlen Messingakzenten für eine zeitlose Farbästhetik.</p>
                     
                     <!-- Tag container removed -->
                 </div>
@@ -1022,14 +1073,16 @@
         </div>
     </section>
 
-    <!-- Main Content Area -->
-    <main id="moodboard-content" class="container">
+    <!-- Main Content Wrapper (includes all sections to apply the fade/blur effect during switching) -->
+    <div id="moodboard-main-wrapper">
+        <!-- Main Content Area -->
+        <main id="moodboard-content" class="container">
 
         <!-- 2. Sektion: Die Marken-Farbpalette -->
         <section class="mood-section" id="mood-colors">
             <div class="section-header">
                 <h3>Die Farbpalette</h3>
-                <p>Abgeleitet aus den echten Materialien der Architektur. Klicken Sie auf ein Farbfeld, um den HEX-Code zu kopieren.</p>
+                <p>Einheitliches Farbkonzept für eine harmonische Gestaltung. Klicken Sie auf ein Farbfeld, um den HEX-Code zu kopieren.</p>
             </div>
             
             <div class="colors-grid" id="colors-container">
@@ -1039,9 +1092,9 @@
                     </div>
                     <div class="color-info">
                         <span class="role">Hauptfarbe</span>
-                        <h4 class="color-name">Bronze (Geländer & Profile)</h4>
-                        <p class="color-desc">Dunkler Bronzeton der staketenartigen Balkongeländer und beschichteten Metallprofile.</p>
-                        <span class="color-origin">Balkongeländer & Details</span>
+                        <h4 class="color-name">Tiefes Bronzebraun</h4>
+                        <p class="color-desc">Ein tiefer, erdiger Braunton mit subtilem Metallcharakter, der für Stabilität und visuelle Tiefe sorgt.</p>
+                        <span class="color-origin">Konstruktive Details</span>
                     </div>
                 </div>
                 <div class="color-card" id="swatch-2" onclick="copyColorDynamic(2)">
@@ -1050,9 +1103,9 @@
                     </div>
                     <div class="color-info">
                         <span class="role">Sekundärfarbe</span>
-                        <h4 class="color-name">Mineralisches Sandbeige</h4>
-                        <p class="color-desc">Warmes, sandfarbenes Beige des mineralischen Glattputzes der Aussenfassade.</p>
-                        <span class="color-origin">Aussenputz glatt</span>
+                        <h4 class="color-name">Sandiges Warmbeige</h4>
+                        <p class="color-desc">Ein heller, mineralisch-warmer Beigeton, der Leichtigkeit vermittelt und als beruhigender Gegenpol dient.</p>
+                        <span class="color-origin">Flächengestaltung</span>
                     </div>
                 </div>
                 <div class="color-card" id="swatch-3" onclick="copyColorDynamic(3)">
@@ -1061,20 +1114,20 @@
                     </div>
                     <div class="color-info">
                         <span class="role">Akzentfarbe</span>
-                        <h4 class="color-name">Eloxiertes Messing</h4>
-                        <p class="color-desc">Brillanter, matter Gold-Messington der eloxierten Holz-Metall-Fensterrahmen.</p>
-                        <span class="color-origin">Holz-Metall-Fenster</span>
+                        <h4 class="color-name">Gedecktes Messinggold</h4>
+                        <p class="color-desc">Ein edler, matter Gold-Messington, der als feiner, warmer Akzent gezielte visuelle Highlights setzt.</p>
+                        <span class="color-origin">Detailakzente</span>
                     </div>
                 </div>
                 <div class="color-card" id="swatch-4" onclick="copyColorDynamic(4)">
                     <div class="color-swatch">
-                        <span class="color-hex-tag">#B1AB9C</span>
+                        <span class="color-hex-tag">#f6f5f2</span>
                     </div>
                     <div class="color-info">
                         <span class="role">Hintergrund hell</span>
-                        <h4 class="color-name">Warmgrau (Strukturputz)</h4>
-                        <p class="color-desc">Warmgrauer Aussenputz grob, der dem Baukörper Struktur und Tiefe verleiht.</p>
-                        <span class="color-origin">Aussenputz grob (warmgrau)</span>
+                        <h4 class="color-name">Klares Kalkweiss</h4>
+                        <p class="color-desc">Ein sehr heller, gebrochener Weisston, der Weite und ein Gefühl von Offenheit im Raum schafft.</p>
+                        <span class="color-origin">Hintergrundflächen</span>
                     </div>
                 </div>
                 <div class="color-card" id="swatch-5" onclick="copyColorDynamic(5)">
@@ -1083,27 +1136,18 @@
                     </div>
                     <div class="color-info">
                         <span class="role">Kontrastfarbe</span>
-                        <h4 class="color-name">Dunkelgrau (Ziegeldach)</h4>
-                        <p class="color-desc">Klassischer Dunkelgrauton des Ziegeldachs und der PV-Anlage.</p>
-                        <span class="color-origin">Ziegeldach & PV-Anlage</span>
-                    </div>
-                </div>
-                <div class="color-card" id="swatch-6" onclick="copyColorDynamic(6)">
-                    <div class="color-swatch">
-                        <span class="color-hex-tag">#BE8D45</span>
-                    </div>
-                    <div class="color-info">
-                        <span class="role">Bodenfarbe</span>
-                        <h4 class="color-name">Eiche Natur</h4>
-                        <p class="color-desc">Farbton des gebürsteten, naturmatt versiegelten Eichenparketts mit wenig Gelbstich.</p>
-                        <span class="color-origin">Parkett Eiche natur</span>
+                        <h4 class="color-name">Neutrales Dunkelgrau</h4>
+                        <p class="color-desc">Ein solides, neutrales Dunkelgrau, das klare Strukturen definiert und den Entwurf erdet.</p>
+                        <span class="color-origin">Kontrastelemente</span>
                     </div>
                 </div>
             </div>
         </section>
+    </main> <!-- Close main#moodboard-content -->
 
-        <!-- 3. Sektion: Das typografische Konzept -->
-        <section class="mood-section" id="mood-typography">
+    <!-- 3. Sektion: Das typografische Konzept (Full-width in Kontrastfarbe) -->
+    <section id="mood-typography" class="mood-contrast-section">
+        <div class="container">
             <div class="section-header">
                 <h3>Das typografische Konzept</h3>
                 <p>Schnittstellen der Typografie im Aussen- und Innenbereich.</p>
@@ -1135,13 +1179,16 @@
                     
                     <div class="typo-preview">
                         <span class="typo-label">Live-Schriftmuster</span>
-                        <h3 class="preview-headline" id="typo-preview-headline">Materialkonzept RS11</h3>
-                        <p class="preview-paragraph" id="typo-preview-paragraph">Die architektonische Ausarbeitung an der Rapperswilerstrasse 11 kombiniert mineralische Verputze mit massivem Holz und eloxierten Metallelementen.</p>
+                        <h3 class="preview-headline" id="typo-preview-headline">Farbkonzept RS11</h3>
+                        <p class="preview-paragraph" id="typo-preview-paragraph">Die Farbstimmung vereint erdige, naturnahe Töne mit hellen Basisflächen und metallischen Akzenten zu einem harmonischen Gesamtbild.</p>
                     </div>
                 </div>
             </div>
-        </section>
- 
+        </div> <!-- End of container inside typography section -->
+    </section>
+
+    <!-- Reopen Main Content Area for UI Preview -->
+    <main id="moodboard-content-bottom" class="container">
         <!-- 4. Sektion: Beispiel-Sektion mit Live UI- & Button-Vorschau -->
         <section class="mood-section" id="mood-ui">
             <div class="section-header">
@@ -1159,7 +1206,7 @@
                         </div>
                         <div class="ui-card-body">
                             <h4 class="ui-card-title" id="ui-card-title">Wohnung G (Dachgeschoss)</h4>
-                            <p class="ui-card-desc" id="ui-card-desc">Loft-Wohnung mit sichtbaren weiss lasierten Holzpfetten, gebürstetem Parkett und schwellenlosem Terrassenaustritt.</p>
+                            <p class="ui-card-desc" id="ui-card-desc">Großzügige Raumatmosphäre geprägt von hellen Farbtönen, sanften Kontrasten und harmonisch fließenden Übergängen.</p>
                             
                             <div class="ui-card-meta">
                                 <span class="meta-item"><i class="fa-solid fa-expand"></i> 119 m² Wohnfläche</span>
@@ -1178,7 +1225,7 @@
                     <span class="ui-block-label">Digitale Button-Strukturen</span>
                     <div class="button-explanation-card">
                         <h4>Farbdefinition der Bedienelemente</h4>
-                        <p class="btn-intro-text">Die Farbcodierung der Bedienelemente leitet sich direkt aus den physikalischen Werkstoffen des Baukörpers ab:</p>
+                        <p class="btn-intro-text">Die Farbcodierung der Bedienelemente folgt der hierarchischen Strukturierung des Farbkonzepts:</p>
                         
                         <div class="showcase-buttons-stack">
                             <!-- Primary Button -->
@@ -1188,7 +1235,7 @@
                                 </div>
                                 <div class="btn-info-column">
                                     <span class="btn-role">Primary Button</span>
-                                    <p class="btn-desc" id="btn-primary-desc">Dunkler Bronzeton der Geländer. Weich, solide, mit unaufdringlichem Kontrast.</p>
+                                    <p class="btn-desc" id="btn-primary-desc">Ein tiefer, erdiger Braunton. Weich, solide und mit unaufdringlichem Kontrast.</p>
                                 </div>
                             </div>
  
@@ -1199,7 +1246,7 @@
                                 </div>
                                 <div class="btn-info-column">
                                     <span class="btn-role">Secondary Button</span>
-                                    <p class="btn-desc" id="btn-secondary-desc">Feiner Sandstein-Beigeton. Wirkt leicht, mineralisch und harmonisch zurückhaltend.</p>
+                                    <p class="btn-desc" id="btn-secondary-desc">Ein sanfter Sand-Beigeton. Wirkt leicht, ruhig und harmonisch zurückhaltend.</p>
                                 </div>
                             </div>
  
@@ -1210,7 +1257,7 @@
                                 </div>
                                 <div class="btn-info-column">
                                     <span class="btn-role">Accent Button</span>
-                                    <p class="btn-desc" id="btn-accent-desc">Eloxal-Messington. Zieht die Aufmerksamkeit gezielt auf das exklusive Detail.</p>
+                                    <p class="btn-desc" id="btn-accent-desc">Ein edler Messing-Goldton. Zieht die Aufmerksamkeit gezielt auf wichtige Akzente.</p>
                                 </div>
                             </div>
                         </div>
@@ -1220,8 +1267,9 @@
         </section>
  
         <!-- Sektion Brandingname & Slogan entfernt -->
-
+ 
     </main>
+    </div> <!-- End of moodboard-main-wrapper -->
 
     <!-- Toast-Meldung für Farbkopie -->
     <div id="toast" class="toast">
@@ -1243,62 +1291,64 @@
         const brandingData = {
             'RS11': {
                 badge: 'Konzept 01 // Favorit',
-                title: 'Materialkonzept RS11',
-                lead: 'Kombination aus naturbelassenem Eichenholz, sandfarbenem mineralischem Aussenputz und eloxiertem Messing.',
+                title: 'Farbkonzept RS11',
+                lead: 'Kombination aus warmen Holztönen, sandigem Beige und edlen Messingakzenten für eine zeitlose Farbästhetik.',
                 brandName: 'RS11',
-                brandSlogan: 'Materialfokus und konstruktive Präzision.',
-                tags: ['Eiche Natur', 'Eloxiertes Messing', 'Sandbeige', 'Mineralputz'],
+                brandSlogan: 'Fokus auf harmonische Kontraste und farbliche Präzision.',
+                tags: ['Bronzebraun', 'Warmbeige', 'Messinggold', 'Kalkweiss'],
                 titleFont: 'Playfair Display',
                 specimenLarge: 'Aa',
                 specimenAlphabet: 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z',
-                previewHeadline: 'Strukturelle Materialfügung.',
-                previewParagraph: 'Die Detaillierung kombiniert mineralische Verputze mit massiven Holzbauteilen und eloxierten Aluminiumprofilen zur Gewährleistung dauerhafter Witterungsbeständigkeit.',
+                previewHeadline: 'Strukturelle Farbharmonie.',
+                previewParagraph: 'Die Farbstimmung vereint erdige, naturnahe Töne mit hellen Basisflächen und metallischen Akzenten zu einem harmonischen Gesamtbild.',
                 
                 // Buttons Showcase Descriptions (Static Labels in HTML)
                 buttons: {
-                    primary: { desc: 'Farbton für pulverbeschichtete Metallprofile und Geländer.' },
-                    secondary: { desc: 'Entspricht dem mineralischen Aussenputz der Fassadenhauptfläche.' },
-                    accent: { desc: 'Orientiert am eloxierten Messington der Holz-Metall-Fensterprofile.' }
+                    primary: { desc: 'Eleganter Dunkelbronze-Ton, der ruhige und präzise Strukturen schafft.' },
+                    secondary: { desc: 'Helles Sandbeige, das eine freundliche, warme Grundstimmung erzeugt.' },
+                    accent: { desc: 'Edler, matter Messing-Goldton für präzise visuelle Highlights.' }
                 },
                 
-                // Farbpalette (Faktenbasiert & Technisch)
+
+                
+                // Farbpalette (Abstrakt & Einheitlich)
                 colors: [
-                    { name: 'Bronze (Geländer & Profile)', hex: '#524434', role: 'Hauptfarbe (Primary)', desc: 'Dunkler Bronzeton der staketenartigen Balkongeländer und beschichteten Metallprofile.', origin: 'Balkongeländer & Details' },
-                    { name: 'Mineralisches Sandbeige', hex: '#D9D5CC', role: 'Sekundärfarbe (Secondary)', desc: 'Warmes, sandfarbenes Beige des mineralischen Glattputzes der Aussenfassade.', origin: 'Aussenputz glatt (sand warm)' },
-                    { name: 'Eloxiertes Messing', hex: '#998F48', role: 'Akzentfarbe (Accent)', desc: 'Brillanter, matter Gold-Messington der eloxierten Holz-Metall-Fensterrahmen.', origin: 'Holz-Metall-Fenster' },
-                    { name: 'Warmgrau (Strukturputz)', hex: '#B1AB9C', role: 'Hintergrund hell', desc: 'Warmgrauer Aussenputz grob, der dem Baukörper Struktur und Tiefe verleiht.', origin: 'Aussenputz grob (warmgrau)' },
-                    { name: 'Dunkelgrau (Ziegeldach)', hex: '#8C8C8C', role: 'Kontrastfarbe', desc: 'Klassischer Dunkelgrauton des Ziegeldachs und der PV-Anlage.', origin: 'Ziegeldach & PV-Anlage' },
-                    { name: 'Eiche Natur', hex: '#BE8D45', role: 'Bodenfarbe (Floor)', desc: 'Farbton des gebürsteten, naturmatt versiegelten Eichenparketts mit wenig Gelbstich.', origin: 'Parkett Eiche natur' }
+                    { name: 'Tiefes Bronzebraun', hex: '#524434', role: 'Hauptfarbe (Primary)', desc: 'Ein tiefer, erdiger Braunton mit subtilem Metallcharakter, der für Stabilität und visuelle Tiefe sorgt.', origin: 'Konstruktive Details' },
+                    { name: 'Sandiges Warmbeige', hex: '#D9D5CC', role: 'Sekundärfarbe (Secondary)', desc: 'Ein heller, mineralisch-warmer Beigeton, der Leichtigkeit vermittelt und als beruhigender Gegenpol dient.', origin: 'Flächengestaltung' },
+                    { name: 'Gedecktes Messinggold', hex: '#998F48', role: 'Akzentfarbe (Accent)', desc: 'Ein edler, matter Gold-Messington, der als feiner, warmer Akzent gezielte visuelle Highlights setzt.', origin: 'Detailakzente' },
+                    { name: 'Klares Kalkweiss', hex: '#f6f5f2', role: 'Hintergrund hell', desc: 'Ein sehr heller, gebrochener Weisston, der Weite und ein Gefühl von Offenheit im Raum schafft.', origin: 'Hintergrundflächen' },
+                    { name: 'Neutrales Dunkelgrau', hex: '#8C8C8C', role: 'Kontrastfarbe', desc: 'Ein solides, neutrales Dunkelgrau, das klare Strukturen definiert und den Entwurf erdet.', origin: 'Kontrastelemente' }
                 ]
             },
             'ESCHEN 11': {
-                badge: 'Konzept 02 // Residenz',
-                title: 'Materialkonzept ESCHEN 11',
-                lead: 'Kombination aus naturbelassenem Eichenholz, geschliffenem Sandstein und champagnergoldenen Metallelementen.',
+                badge: 'Konzept 02',
+                title: 'Farbkonzept ESCHEN 11',
+                lead: 'Kombination aus dunklen Kontrasten, feinen Sandsteintönen und warmen Akzenten für eine anspruchsvolle Farbwelt.',
                 brandName: 'ESCHEN 11',
-                brandSlogan: 'Symmetrie und selektierte Materialkontraste.',
-                tags: ['Sandstein', 'Eiche Natur', 'Champagner-Gold', 'Kompakte Textur'],
+                brandSlogan: 'Symmetrie und erlesene Farbstimmungen.',
+                tags: ['Espressobraun', 'Steinbeige', 'Kupfergrau', 'Elfenbein'],
                 titleFont: 'Cormorant Garamond',
                 specimenLarge: 'Aa',
                 specimenAlphabet: 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z',
-                previewHeadline: 'Klassische Materialfügung.',
-                previewParagraph: 'Einsatz von Eichenparkett Natur im Innenbereich und geschliffenem Sandstein an der Fassade. Die Metallelemente in Champagnergold definieren präzise Übergänge.',
+                previewHeadline: 'Klassische Farbkombination.',
+                previewParagraph: 'Ein tiefes Dunkelbraun harmoniert mit sanften Stein-Beigetönen und wird durch kupferfarbene Akzente stilvoll verfeinert.',
                 
                 // Buttons Showcase Descriptions (Static Labels in HTML)
                 buttons: {
-                    primary: { desc: 'Farbwert der edlen Holzeinbauten und dunklen Türprofile.' },
-                    secondary: { desc: 'Natursteinton der Sockel- und Bodenplatten.' },
-                    accent: { desc: 'Metallischer Akzentton der Armaturen und Profile.' }
+                    primary: { desc: 'Sehr tiefes Espressobraun für kraftvolle Rahmen und edle Kontraste.' },
+                    secondary: { desc: 'Sanftes, mineralisches Beige für ruhige Übergänge und Ausgewogenheit.' },
+                    accent: { desc: 'Warmer Kupfer-Dunkelgrauton, der als präziser Akzent Akzente setzt.' }
                 },
                 
-                // Farbpalette (Faktenbasiert & Technisch)
+
+                
+                // Farbpalette (Abstrakt & Einheitlich)
                 colors: [
-                    { name: 'Dunkelbraun (Innentüren & Einbauten)', hex: '#42312B', role: 'Hauptfarbe (Primary)', desc: 'Dunkler Edelholz-Farbton für Türen, Profile und Einbauten. Bildet einen exklusiven Kontrast.', origin: 'Innentüren & Einbauten' },
-                    { name: 'Warm Sandstone', hex: '#CECAC1', role: 'Sekundärfarbe (Secondary)', desc: 'Mineralischer Beigeton des sandgestrahlten Aussenputzes im Sockelbereich.', origin: 'Aussenputz glatt (Sockel)' },
-                    { name: 'Kupfer-Dunkelgrau (Metalldach)', hex: '#4E4843', role: 'Akzentfarbe (Accent)', desc: 'Dunkelgrauer Eloxalton der Blechprofile, Rinnen und Metalldächer mit dezentem Kupferanteil.', origin: 'Metalldach & Rinnen' },
-                    { name: 'Farbe Weiss', hex: '#D1D1D1', role: 'Hintergrund hell', desc: 'Gebrochenes Weiss des mineralischen Innenabriebs an Decken und Wänden.', origin: 'Wände & Decken (Weissputz)' },
-                    { name: 'Dunkel Warmgrau (Sockel)', hex: '#817865', role: 'Kontrastfarbe', desc: 'Dunkel warmgrauer Aussenputz grob des Gebäudesockels.', origin: 'Aussenputz grob (Sockel)' },
-                    { name: 'Eiche Natur (Holzparkett)', hex: '#BE8D45', role: 'Bodenfarbe (Floor)', desc: 'Farbwert des warmen, hochwertigen Eichenriemenparketts im Innenbereich.', origin: 'Parkett Eiche natur' }
+                    { name: 'Tiefes Espressobraun', hex: '#42312B', role: 'Hauptfarbe (Primary)', desc: 'Ein sehr dunkler, eleganter Braunton, der für präzise Rahmung und edlen Kontrast sorgt.', origin: 'Konstruktive Details' },
+                    { name: 'Sanftes Steinbeige', hex: '#CECAC1', role: 'Sekundärfarbe (Secondary)', desc: 'Ein mineralisch-milder Sandsteinton, der eine natürliche Ruhe ausstrahlt.', origin: 'Flächengestaltung' },
+                    { name: 'Kupfer-Dunkelgrau', hex: '#4E4843', role: 'Akzentfarbe (Accent)', desc: 'Ein warmer Anthrazitton mit feiner Kupfernuance, der dezente visuelle Tiefe einbringt.', origin: 'Detailakzente' },
+                    { name: 'Cremiges Elfenbein', hex: '#f7f4eb', role: 'Hintergrund hell', desc: 'Ein besonders warmer, elfenbeinfarbener Off-White-Ton, der Behaglichkeit und Weichheit ausstrahlt.', origin: 'Hintergrundflächen' },
+                    { name: 'Gedecktes Warmgrau', hex: '#817865', role: 'Kontrastfarbe', desc: 'Ein erdiger, dunkler Warmgrauton, der als vermittelndes Kontrastelement dient.', origin: 'Kontrastelemente' }
                 ]
             }
         };
@@ -1333,7 +1383,7 @@
             });
 
             // D. Update Color Swatches
-            for (let i = 0; i < 6; i++) {
+            for (let i = 0; i < data.colors.length; i++) {
                 const swatchIdx = i + 1;
                 const card = document.getElementById(`swatch-${swatchIdx}`);
                 if (!card) continue;
@@ -1375,12 +1425,14 @@
             // F. Update UI Preview Card details
             const uiTitle = document.getElementById('ui-card-title');
             const uiDesc = document.getElementById('ui-card-desc');
-            if (uiTitle) uiTitle.textContent = brandName === 'RS11' ? 'Wohnung RS11 (Regulär)' : 'Residenz ESCHEN 11 (Premium)';
+            if (uiTitle) uiTitle.textContent = brandName === 'RS11' ? 'Wohnung RS11' : 'Wohnung ESCHEN 11';
             if (uiDesc) {
                 uiDesc.textContent = brandName === 'RS11' 
-                    ? 'Wohnungseinheit mit Eichenholzparkett, mineralisch verputzten Wänden und Balkonelementen aus pulverbeschichteter Bronze.'
-                    : 'Wohnungseinheit mit Riemenparkett Eiche natur, geschliffenen Natursteinflächen und Sanitärausstattung in Champagner-Gold.';
+                    ? 'Wohnungseinheit mit warmen Erdtönen, hellen Raumhintergründen und fein abgestimmten dunklen Kontrastelementen.'
+                    : 'Wohnungseinheit mit hellen mineralischen Nuancen, tiefen kontrastierenden Profilfarben und edlen warmen Highlights.';
             }
+
+
 
             // G. Update Button Showcase Descriptions
             const btnPrimaryDesc = document.getElementById('btn-primary-desc');
@@ -1433,7 +1485,7 @@
                 btn.setAttribute('aria-selected', active ? 'true' : 'false');
             });
 
-            const mainContent = document.getElementById('moodboard-content');
+            const mainContent = document.getElementById('moodboard-main-wrapper');
             if (mainContent) {
                 mainContent.style.opacity = '0.3';
                 mainContent.style.filter = 'blur(4px)';
