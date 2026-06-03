@@ -144,6 +144,7 @@
         .brand-info h1 {
             font-size: 1.5rem;
             letter-spacing: 2px;
+            color: var(--color-primary);
         }
 
         .brand-info .sub {
@@ -215,10 +216,11 @@
         #mood-hero {
             position: relative;
             padding: 40px 0;
-            background-color: #1a1715;
+            background-color: var(--color-primary);
             color: #ffffff;
             overflow: hidden;
             margin-bottom: 40px;
+            transition: background-color 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         .hero-bg-overlay {
@@ -227,7 +229,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(82, 68, 52, 0.15) 0%, rgba(16, 13, 11, 0.95) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(16, 13, 11, 0.85) 100%);
             z-index: 1;
         }
 
@@ -462,8 +464,8 @@
 
         .typo-grid {
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 64px;
+            grid-template-columns: 1fr 1fr 1.2fr;
+            gap: 40px;
         }
 
         .typo-label {
@@ -483,6 +485,29 @@
             margin-bottom: 24px;
             font-family: var(--font-serif);
             font-style: var(--font-title-style);
+        }
+
+        /* Force Inter for the body font specimen card */
+        .typo-specimen.body-font h4,
+        .typo-specimen.body-font .specimen-large,
+        .typo-specimen.body-font .specimen-alphabet,
+        .typo-specimen.body-font .specimen-display,
+        .body-specimen-large,
+        .body-specimen-alphabet {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+            font-weight: 400;
+        }
+        
+        .typo-specimen.body-font h4 {
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+        
+        .typo-specimen.body-font .specimen-large {
+            font-size: 4rem;
+            line-height: 1;
+            color: var(--color-accent);
+            font-weight: 400;
         }
 
         .specimen-display {
@@ -722,7 +747,7 @@
             font-family: var(--font-sans);
             font-size: 0.85rem;
             font-weight: 600;
-            cursor: default;
+            cursor: pointer;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -737,6 +762,11 @@
             border-radius: var(--border-radius);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
+        .btn-primary-preview:hover {
+            background-color: var(--color-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
 
         /* Secondary Button Showcase (Styled like Sandstone / Sandbeige) */
         .btn-secondary-preview {
@@ -744,6 +774,12 @@
             color: var(--color-text-core);
             border: 2px solid var(--color-secondary);
             border-radius: var(--border-radius);
+        }
+        .btn-secondary-preview:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
         }
 
         /* Accent Button Showcase (Styled like Messing or Champagner-Gold) */
@@ -753,6 +789,11 @@
             border: none;
             border-radius: var(--border-radius);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .btn-accent-preview:hover {
+            background-color: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
 
         /* Sektion: Darstellung des Brandingnamens */
@@ -954,12 +995,10 @@
             <!-- Der interaktive Switcher -->
             <div class="variant-switcher" role="tablist">
                 <button class="header-switcher-btn active" data-variant="RS11" role="tab" aria-selected="true" id="tab-v1">
-                    <span class="num">01</span>
-                    <span class="name">Materialkonzept RS11 (Eiche / Messing-Eloxal)</span>
+                    <span class="name">RS11</span>
                 </button>
                 <button class="header-switcher-btn" data-variant="ESCHEN 11" role="tab" aria-selected="false" id="tab-v2">
-                    <span class="num">02</span>
-                    <span class="name">Materialkonzept ESCHEN 11 (Nussbaum / Champagner-Gold)</span>
+                    <span class="name">ESCHEN 11</span>
                 </button>
             </div>
         </div>
@@ -1078,6 +1117,7 @@
             
             <div class="typography-card">
                 <div class="typo-grid">
+                    <!-- Title Font Specimen -->
                     <div class="typo-specimen">
                         <span class="typo-label">Überschriften (Title Font)</span>
                         <h4 id="typo-title-font-name">Playfair Display</h4>
@@ -1086,9 +1126,20 @@
                             <span class="specimen-alphabet" id="typo-specimen-alphabet">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
                         </div>
                     </div>
+                    
+                    <!-- Body Font Specimen -->
+                    <div class="typo-specimen body-font">
+                        <span class="typo-label">Fliesstext (Body Font)</span>
+                        <h4>Inter</h4>
+                        <div class="specimen-display">
+                            <span class="specimen-large body-specimen-large">Aa</span>
+                            <span class="specimen-alphabet body-specimen-alphabet">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
+                        </div>
+                    </div>
+                    
                     <div class="typo-preview">
                         <span class="typo-label">Live-Schriftmuster</span>
-                        <h3 class="preview-headline" id="typo-preview-headline">Materialkonzept RS11 (Eiche / Messing-Eloxal)</h3>
+                        <h3 class="preview-headline" id="typo-preview-headline">Materialkonzept RS11</h3>
                         <p class="preview-paragraph" id="typo-preview-paragraph">Die architektonische Ausarbeitung an der Rapperswilerstrasse 11 kombiniert mineralische Verputze mit massivem Holz und eloxierten Metallelementen.</p>
                     </div>
                 </div>
@@ -1172,22 +1223,7 @@
             </div>
         </section>
  
-        <!-- 5. Sektion: Darstellung des Brandingnamens -->
-        <section class="mood-section" id="mood-branding-showcase">
-            <div class="section-header">
-                <h3>Brandingname & Slogan</h3>
-                <p>Darstellung des Projektnamens und der primären Leitlinie.</p>
-            </div>
-            
-            <div class="branding-name-card">
-                <div class="branding-name-inner">
-                    <span class="branding-category">Wortmarke & Slogan</span>
-                    <h2 class="branding-name-large brand-name" id="brand-showcase-name">RS11</h2>
-                    <div class="branding-slogan-line"></div>
-                    <p class="branding-slogan" id="brand-showcase-slogan">Materialfokus und konstruktive Präzision.</p>
-                </div>
-            </div>
-        </section>
+        <!-- Sektion Brandingname & Slogan entfernt -->
 
     </main>
 
@@ -1231,7 +1267,7 @@
                 
                 // Farbpalette (Faktenbasiert & Technisch)
                 colors: [
-                    { name: 'Eschenbach Bronze', hex: '#524434', role: 'Hauptfarbe (Primary)', desc: 'Farbton für beschichtete Geländer und Metallprofile. Alternative zu Schwarz.', origin: 'Balkongeländer & Profile' },
+                    { name: 'Bronze (Geländer & Profile)', hex: '#524434', role: 'Hauptfarbe (Primary)', desc: 'Farbton für beschichtete Geländer und Metallprofile. Alternative zu Schwarz.', origin: 'Balkongeländer & Profile' },
                     { name: 'Mineralisches Sandbeige', hex: '#D9D5CC', role: 'Sekundärfarbe (Secondary)', desc: 'Entspricht dem sandfarbenen mineralischen Aussenputz der Hauptfassade.', origin: 'Haupt-Aussenfassade' },
                     { name: 'Eloxiertes Messing', hex: '#998F48', role: 'Akzentfarbe (Accent)', desc: 'Akzentton der eloxierten Aluminium-Fensterrahmen und Aussenportale.', origin: 'Holz-Metall-Fenster' },
                     { name: 'Gebrochenes Kalkweiss', hex: '#F6F5F2', role: 'Hintergrund hell', desc: 'Warmer Weissgrad für den Innenputz zur Vermeidung hoher Kontraste.', origin: 'Innenwände & Wandabrieb' },
