@@ -15,52 +15,31 @@
     <!-- Self-Contained Moodboard Styling for Maximum Portability & Premium Aesthetics -->
     <style>
         :root {
+            color-scheme: light; /* Verhindert automatische Farbinvertierung durch den System-Dunkelmodus auf Mobilgeräten */
+
             /* Fallback Core Settings */
             --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-serif: 'Playfair Display', Georgia, serif;
             --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             --transition-quick: all 0.25s ease-out;
             --box-shadow-soft: 0 10px 30px rgba(35, 29, 25, 0.02);
             --box-shadow-medium: 0 20px 45px rgba(35, 29, 25, 0.05);
-        }
 
-        /* --- Dynamische Schrift- und Farb-Umschaltung via Body-Klasse --- */
-        
-        /* Variante 1: RS11 (Bodenständige Eleganz - Favorit) */
-        body.brand-rs11 {
-            --bg-page: #f6f5f2;               /* Gebrochenes Kalkweiss */
+            /* Farbwelt Eschen 11 (Basierend auf RS11) */
+            --bg-page: #f6f5f2;               /* Klares Kalkweiss */
             --color-card-bg: #ffffff;
             --color-border: rgba(82, 68, 52, 0.08);
             --color-text-core: #2d2a27;       /* Tiefes Basaltgrau */
             --color-text-light: #4c4742;      
             
-            --color-primary: #524434;         /* Dunkelbronze */
+            --color-primary: #615243;         /* Warmes Bronzebraun */
             --color-secondary: #d9d5cc;       /* Sandbeige */
             --color-accent: #998f48;          /* Messing-Gold */
             --color-accent-hover: #81783c;
-            --color-contrast: #8c8c8c;        /* Dunkelgrau */
+            --color-contrast: #989898;        /* Neutrales Mittelgrau */
             
-            --font-serif: 'Playfair Display', Georgia, serif;
             --border-radius: 8px;
             --font-title-style: normal;
-        }
-
-        /* Variante 2: ESCHEN 11 (Premium-Konzept) */
-        body.brand-eschen11 {
-            --bg-page: #f7f4eb;               /* Cremeweiss / Ivory */
-            --color-card-bg: #ffffff;
-            --color-border: rgba(82, 68, 52, 0.12);
-            --color-text-core: #100d0b;       /* Kaviar-Schwarz */
-            --color-text-light: #42312b;      /* Dunkelbraun */
-            
-            --color-primary: #42312b;         /* Dunkelbraun */
-            --color-secondary: #cecac1;       /* Warmes Sandbeige */
-            --color-accent: #4e4843;          /* Kupfer-Dunkelgrau */
-            --color-accent-hover: #3c3733;
-            --color-contrast: #817865;        /* Dunkel-Warmgrau */
-            
-            --font-serif: 'Cormorant Garamond', Georgia, serif;
-            --border-radius: 16px;            /* Weicher, geschwungener Look */
-            --font-title-style: normal;       /* Regular-Stil für Titel */
         }
 
         /* Base styles */
@@ -93,7 +72,8 @@
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-serif);
             font-weight: 500;
-            color: var(--color-text-core);
+            color: var(--color-primary); /* Hauptfarbe grundsätzlich für Titel */
+            font-style: var(--font-title-style);
             transition: all 0.4s ease;
         }
 
@@ -118,7 +98,7 @@
             line-height: 1.7;
         }
 
-        /* Header mit Switcher */
+        /* Header */
         #moodboard-header {
             position: fixed;
             top: 0;
@@ -144,7 +124,7 @@
         .brand-info h1 {
             font-size: 1.5rem;
             letter-spacing: 2px;
-            color: var(--color-primary);
+            color: var(--color-primary); /* Logo in Hauptfarbe */
         }
 
         .brand-info .sub {
@@ -157,47 +137,19 @@
             margin-top: 2px;
         }
 
-        .variant-switcher {
-            display: flex;
-            background-color: rgba(0, 0, 0, 0.03);
-            padding: 6px;
+        .concept-status-badge {
+            background-color: var(--color-primary);
+            color: #ffffff;
+            padding: 8px 18px;
             border-radius: 50px;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .header-switcher-btn {
-            background: none;
-            border: none;
-            padding: 10px 24px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-family: var(--font-sans);
+            font-size: 0.75rem;
             font-weight: 600;
-            font-size: 0.85rem;
-            display: flex;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--color-text-light);
-            transition: var(--transition-smooth);
-        }
-
-        .header-switcher-btn .num {
-            opacity: 0.5;
-            font-size: 0.75rem;
-        }
-
-        .header-switcher-btn:hover {
-            color: var(--color-text-core);
-        }
-
-        .header-switcher-btn.active {
-            background-color: var(--color-primary);
-            color: #ffffff !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .header-switcher-btn.active .num {
-            opacity: 0.8;
+            box-shadow: 0 4px 10px rgba(82, 68, 52, 0.15);
         }
 
         .back-link {
@@ -613,7 +565,7 @@
         .ui-card-title {
             font-family: var(--font-serif);
             font-size: 1.5rem;
-            color: var(--color-text-core);
+            color: var(--color-primary);
             font-style: var(--font-title-style);
         }
 
@@ -648,7 +600,7 @@
 
         .ui-card-btn {
             background-color: var(--color-primary);
-            color: #ffffff;
+            color: var(--color-primary-contrast);
             border: none;
             padding: 14px;
             border-radius: var(--border-radius);
@@ -754,7 +706,7 @@
         /* Primary Button Showcase (Styled like Bronze / Dunkelbraun) */
         .btn-primary-preview {
             background-color: var(--color-primary);
-            color: #ffffff;
+            color: var(--color-primary-contrast);
             border: none;
             border-radius: var(--border-radius);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -851,8 +803,8 @@
             bottom: 40px;
             left: 50%;
             transform: translateX(-50%) translateY(100px);
-            background-color: var(--color-primary);
-            color: #ffffff;
+            background-color: var(--color-toast-bg);
+            color: var(--color-toast-text);
             padding: 12px 24px;
             border-radius: 50px;
             font-size: 0.85rem;
@@ -879,7 +831,8 @@
         /* Footer */
         #moodboard-footer {
             background-color: var(--color-primary);
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--color-primary-contrast);
+            opacity: 0.7;
             padding: 40px 0;
             font-size: 0.85rem;
             border-top: 1px solid rgba(251, 250, 247, 0.05);
@@ -923,8 +876,7 @@
         }
 
         section.mood-contrast-section .typo-label {
-            color: var(--color-secondary);
-            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.7);
         }
 
         section.mood-contrast-section .specimen-display {
@@ -1030,24 +982,19 @@
         }
     </style>
 </head>
-<body class="brand-rs11">
+<body class="brand-eschen11">
 
-    <!-- Header mit Varianten-Switcher (Sticky Hilfsnavigation) -->
+    <!-- Header (Sticky Presentation Header) -->
     <header id="moodboard-header">
         <div class="container header-flex">
             <div class="brand-info">
-                <h1 class="brand-name">RS11</h1>
-                <span class="sub">BRANDING MOODBOARDS</span>
+                <h1 class="brand-name">Eschen 11</h1>
+                <span class="sub">FINALES FARBKONZEPT</span>
             </div>
             
-            <!-- Der interaktive Switcher -->
-            <div class="variant-switcher" role="tablist">
-                <button class="header-switcher-btn active" data-variant="RS11" role="tab" aria-selected="true" id="tab-v1">
-                    <span class="name">RS11</span>
-                </button>
-                <button class="header-switcher-btn" data-variant="ESCHEN 11" role="tab" aria-selected="false" id="tab-v2">
-                    <span class="name">ESCHEN 11</span>
-                </button>
+            <!-- Status Badge -->
+            <div class="concept-status-badge">
+                <i class="fa-solid fa-circle-check"></i> Freigegebenes Konzept
             </div>
         </div>
     </header>
@@ -1063,20 +1010,16 @@
                 
                 <!-- Rechte Spalte: Einleitung -->
                 <div class="hero-intro-text">
-                    <span class="badge" id="intro-badge">Konzept 01 // Favorit</span>
-                    <h2 id="intro-title">Farbkonzept RS11</h2>
+                    <span class="badge" id="intro-badge">Farbkonzept</span>
+                    <h2 id="intro-title">Eschen 11</h2>
                     <p id="intro-lead">Kombination aus warmen Holztönen, sandigem Beige und edlen Messingakzenten für eine zeitlose Farbästhetik.</p>
-                    
-                    <!-- Tag container removed -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content Wrapper (includes all sections to apply the fade/blur effect during switching) -->
-    <div id="moodboard-main-wrapper">
-        <!-- Main Content Area -->
-        <main id="moodboard-content" class="container">
+    <!-- Main Content Area -->
+    <main id="moodboard-content" class="container">
 
         <!-- 2. Sektion: Die Marken-Farbpalette -->
         <section class="mood-section" id="mood-colors">
@@ -1086,19 +1029,19 @@
             </div>
             
             <div class="colors-grid" id="colors-container">
-                <div class="color-card" id="swatch-1" onclick="copyColorDynamic(1)">
-                    <div class="color-swatch">
-                        <span class="color-hex-tag">#524434</span>
+                <div class="color-card" id="swatch-1" data-hex="#615243" onclick="copyColorDynamic(1)">
+                    <div class="color-swatch" style="background-color: #615243;">
+                        <span class="color-hex-tag">#615243</span>
                     </div>
                     <div class="color-info">
                         <span class="role">Hauptfarbe</span>
-                        <h4 class="color-name">Tiefes Bronzebraun</h4>
-                        <p class="color-desc">Ein tiefer, erdiger Braunton mit subtilem Metallcharakter, der für Stabilität und visuelle Tiefe sorgt.</p>
+                        <h4 class="color-name">Warmes Bronzebraun</h4>
+                        <p class="color-desc">Ein warmer, erdiger Braunton mit subtilem Metallcharakter, der für Stabilität und visuelle Tiefe sorgt.</p>
                         <span class="color-origin">Konstruktive Details</span>
                     </div>
                 </div>
-                <div class="color-card" id="swatch-2" onclick="copyColorDynamic(2)">
-                    <div class="color-swatch">
+                <div class="color-card" id="swatch-2" data-hex="#D9D5CC" onclick="copyColorDynamic(2)">
+                    <div class="color-swatch" style="background-color: #D9D5CC;">
                         <span class="color-hex-tag">#D9D5CC</span>
                     </div>
                     <div class="color-info">
@@ -1108,8 +1051,8 @@
                         <span class="color-origin">Flächengestaltung</span>
                     </div>
                 </div>
-                <div class="color-card" id="swatch-3" onclick="copyColorDynamic(3)">
-                    <div class="color-swatch">
+                <div class="color-card" id="swatch-3" data-hex="#998F48" onclick="copyColorDynamic(3)">
+                    <div class="color-swatch" style="background-color: #998F48;">
                         <span class="color-hex-tag">#998F48</span>
                     </div>
                     <div class="color-info">
@@ -1119,8 +1062,8 @@
                         <span class="color-origin">Detailakzente</span>
                     </div>
                 </div>
-                <div class="color-card" id="swatch-4" onclick="copyColorDynamic(4)">
-                    <div class="color-swatch">
+                <div class="color-card" id="swatch-4" data-hex="#f6f5f2" onclick="copyColorDynamic(4)">
+                    <div class="color-swatch" style="background-color: #f6f5f2;">
                         <span class="color-hex-tag">#f6f5f2</span>
                     </div>
                     <div class="color-info">
@@ -1130,14 +1073,14 @@
                         <span class="color-origin">Hintergrundflächen</span>
                     </div>
                 </div>
-                <div class="color-card" id="swatch-5" onclick="copyColorDynamic(5)">
-                    <div class="color-swatch">
-                        <span class="color-hex-tag">#8C8C8C</span>
+                <div class="color-card" id="swatch-5" data-hex="#989898" onclick="copyColorDynamic(5)">
+                    <div class="color-swatch" style="background-color: #989898;">
+                        <span class="color-hex-tag">#989898</span>
                     </div>
                     <div class="color-info">
                         <span class="role">Kontrastfarbe</span>
-                        <h4 class="color-name">Neutrales Dunkelgrau</h4>
-                        <p class="color-desc">Ein solides, neutrales Dunkelgrau, das klare Strukturen definiert und den Entwurf erdet.</p>
+                        <h4 class="color-name">Neutrales Mittelgrau</h4>
+                        <p class="color-desc">Ein solides, neutrales Grau, das klare Strukturen definiert und den Entwurf erdet.</p>
                         <span class="color-origin">Kontrastelemente</span>
                     </div>
                 </div>
@@ -1179,7 +1122,7 @@
                     
                     <div class="typo-preview">
                         <span class="typo-label">Live-Schriftmuster</span>
-                        <h3 class="preview-headline" id="typo-preview-headline">Farbkonzept RS11</h3>
+                        <h3 class="preview-headline" id="typo-preview-headline">Farbkonzept Eschen 11</h3>
                         <p class="preview-paragraph" id="typo-preview-paragraph">Die Farbstimmung vereint erdige, naturnahe Töne mit hellen Basisflächen und metallischen Akzenten zu einem harmonischen Gesamtbild.</p>
                     </div>
                 </div>
@@ -1202,10 +1145,10 @@
                     <span class="ui-block-label">Digitale Anwendung (UI-Karte)</span>
                     <div class="ui-card" id="preview-ui-card">
                         <div class="ui-card-image" style="background-image: url('rendering_fassade.png');" id="ui-card-bg">
-                            <span class="ui-badge brand-name" id="ui-card-badge">RS11</span>
+                            <span class="ui-badge brand-name" id="ui-card-badge">Eschen 11</span>
                         </div>
                         <div class="ui-card-body">
-                            <h4 class="ui-card-title" id="ui-card-title">Wohnung G (Dachgeschoss)</h4>
+                            <h4 class="ui-card-title" id="ui-card-title">Wohnung Eschen 11</h4>
                             <p class="ui-card-desc" id="ui-card-desc">Großzügige Raumatmosphäre geprägt von hellen Farbtönen, sanften Kontrasten und harmonisch fließenden Übergängen.</p>
                             
                             <div class="ui-card-meta">
@@ -1269,7 +1212,6 @@
         <!-- Sektion Brandingname & Slogan entfernt -->
  
     </main>
-    </div> <!-- End of moodboard-main-wrapper -->
 
     <!-- Toast-Meldung für Farbkopie -->
     <div id="toast" class="toast">
@@ -1280,177 +1222,13 @@
     <!-- Footer -->
     <footer id="moodboard-footer">
         <div class="container footer-flex">
-            <p>&copy; 2026 <span class="brand-name">RS11</span> — MO Architektur Uznach. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2026 <span class="brand-name">Eschen 11</span> — MO Architektur Uznach. Alle Rechte vorbehalten.</p>
             <p>Brand Design & Moodboard by Antigravity AI</p>
         </div>
     </footer>
 
-    <!-- Clipboard & Dynamic Morphic Switching Script -->
     <script>
-        // --- 1. Die morphische Branding-Datenbank (RS11 vs ESCHEN 11) ---
-        const brandingData = {
-            'RS11': {
-                badge: 'Konzept 01 // Favorit',
-                title: 'Farbkonzept RS11',
-                lead: 'Kombination aus warmen Holztönen, sandigem Beige und edlen Messingakzenten für eine zeitlose Farbästhetik.',
-                brandName: 'RS11',
-                brandSlogan: 'Fokus auf harmonische Kontraste und farbliche Präzision.',
-                tags: ['Bronzebraun', 'Warmbeige', 'Messinggold', 'Kalkweiss'],
-                titleFont: 'Playfair Display',
-                specimenLarge: 'Aa',
-                specimenAlphabet: 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z',
-                previewHeadline: 'Strukturelle Farbharmonie.',
-                previewParagraph: 'Die Farbstimmung vereint erdige, naturnahe Töne mit hellen Basisflächen und metallischen Akzenten zu einem harmonischen Gesamtbild.',
-                
-                // Buttons Showcase Descriptions (Static Labels in HTML)
-                buttons: {
-                    primary: { desc: 'Eleganter Dunkelbronze-Ton, der ruhige und präzise Strukturen schafft.' },
-                    secondary: { desc: 'Helles Sandbeige, das eine freundliche, warme Grundstimmung erzeugt.' },
-                    accent: { desc: 'Edler, matter Messing-Goldton für präzise visuelle Highlights.' }
-                },
-                
-
-                
-                // Farbpalette (Abstrakt & Einheitlich)
-                colors: [
-                    { name: 'Tiefes Bronzebraun', hex: '#524434', role: 'Hauptfarbe (Primary)', desc: 'Ein tiefer, erdiger Braunton mit subtilem Metallcharakter, der für Stabilität und visuelle Tiefe sorgt.', origin: 'Konstruktive Details' },
-                    { name: 'Sandiges Warmbeige', hex: '#D9D5CC', role: 'Sekundärfarbe (Secondary)', desc: 'Ein heller, mineralisch-warmer Beigeton, der Leichtigkeit vermittelt und als beruhigender Gegenpol dient.', origin: 'Flächengestaltung' },
-                    { name: 'Gedecktes Messinggold', hex: '#998F48', role: 'Akzentfarbe (Accent)', desc: 'Ein edler, matter Gold-Messington, der als feiner, warmer Akzent gezielte visuelle Highlights setzt.', origin: 'Detailakzente' },
-                    { name: 'Klares Kalkweiss', hex: '#f6f5f2', role: 'Hintergrund hell', desc: 'Ein sehr heller, gebrochener Weisston, der Weite und ein Gefühl von Offenheit im Raum schafft.', origin: 'Hintergrundflächen' },
-                    { name: 'Neutrales Dunkelgrau', hex: '#8C8C8C', role: 'Kontrastfarbe', desc: 'Ein solides, neutrales Dunkelgrau, das klare Strukturen definiert und den Entwurf erdet.', origin: 'Kontrastelemente' }
-                ]
-            },
-            'ESCHEN 11': {
-                badge: 'Konzept 02',
-                title: 'Farbkonzept ESCHEN 11',
-                lead: 'Kombination aus dunklen Kontrasten, feinen Sandsteintönen und warmen Akzenten für eine anspruchsvolle Farbwelt.',
-                brandName: 'ESCHEN 11',
-                brandSlogan: 'Symmetrie und erlesene Farbstimmungen.',
-                tags: ['Espressobraun', 'Steinbeige', 'Kupfergrau', 'Elfenbein'],
-                titleFont: 'Cormorant Garamond',
-                specimenLarge: 'Aa',
-                specimenAlphabet: 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z',
-                previewHeadline: 'Klassische Farbkombination.',
-                previewParagraph: 'Ein tiefes Dunkelbraun harmoniert mit sanften Stein-Beigetönen und wird durch kupferfarbene Akzente stilvoll verfeinert.',
-                
-                // Buttons Showcase Descriptions (Static Labels in HTML)
-                buttons: {
-                    primary: { desc: 'Sehr tiefes Espressobraun für kraftvolle Rahmen und edle Kontraste.' },
-                    secondary: { desc: 'Sanftes, mineralisches Beige für ruhige Übergänge und Ausgewogenheit.' },
-                    accent: { desc: 'Warmer Kupfer-Dunkelgrauton, der als präziser Akzent Akzente setzt.' }
-                },
-                
-
-                
-                // Farbpalette (Abstrakt & Einheitlich)
-                colors: [
-                    { name: 'Tiefes Espressobraun', hex: '#42312B', role: 'Hauptfarbe (Primary)', desc: 'Ein sehr dunkler, eleganter Braunton, der für präzise Rahmung und edlen Kontrast sorgt.', origin: 'Konstruktive Details' },
-                    { name: 'Sanftes Steinbeige', hex: '#CECAC1', role: 'Sekundärfarbe (Secondary)', desc: 'Ein mineralisch-milder Sandsteinton, der eine natürliche Ruhe ausstrahlt.', origin: 'Flächengestaltung' },
-                    { name: 'Kupfer-Dunkelgrau', hex: '#4E4843', role: 'Akzentfarbe (Accent)', desc: 'Ein warmer Anthrazitton mit feiner Kupfernuance, der dezente visuelle Tiefe einbringt.', origin: 'Detailakzente' },
-                    { name: 'Cremiges Elfenbein', hex: '#f7f4eb', role: 'Hintergrund hell', desc: 'Ein besonders warmer, elfenbeinfarbener Off-White-Ton, der Behaglichkeit und Weichheit ausstrahlt.', origin: 'Hintergrundflächen' },
-                    { name: 'Gedecktes Warmgrau', hex: '#817865', role: 'Kontrastfarbe', desc: 'Ein erdiger, dunkler Warmgrauton, der als vermittelndes Kontrastelement dient.', origin: 'Kontrastelemente' }
-                ]
-            }
-        };
-
-        // --- 2. Dynamic Morphic Rendering-Engine ---
-        function renderMoodboard(brandName) {
-            const data = brandingData[brandName];
-            if (!data) return;
-
-            // A. CSS Variables & Classes on Body
-            if (brandName === 'RS11') {
-                document.body.className = 'brand-rs11';
-            } else {
-                document.body.className = 'brand-eschen11';
-            }
-
-            // B. Update Intro Section
-            const introBadge = document.getElementById('intro-badge');
-            const introTitle = document.getElementById('intro-title');
-            const introLead = document.getElementById('intro-lead');
-            const introTags = document.getElementById('intro-tags');
-            
-            if (introBadge) introBadge.textContent = data.badge;
-            if (introTitle) introTitle.textContent = data.title;
-            if (introLead) introLead.textContent = data.lead;
-            
-            // Tag population removed
-
-            // C. Update dynamic Brand Names across the page
-            document.querySelectorAll('.brand-name').forEach(el => {
-                el.textContent = data.brandName;
-            });
-
-            // D. Update Color Swatches
-            for (let i = 0; i < data.colors.length; i++) {
-                const swatchIdx = i + 1;
-                const card = document.getElementById(`swatch-${swatchIdx}`);
-                if (!card) continue;
-                
-                const colorItem = data.colors[i];
-                card.setAttribute('data-hex', colorItem.hex);
-                
-                const swatch = card.querySelector('.color-swatch');
-                if (swatch) {
-                    swatch.style.backgroundColor = colorItem.hex;
-                }
-                
-                const hexTag = card.querySelector('.color-hex-tag');
-                if (hexTag) hexTag.textContent = colorItem.hex;
-                
-                const nameEl = card.querySelector('.color-name');
-                if (nameEl) nameEl.textContent = colorItem.name;
-                
-                const descEl = card.querySelector('.color-desc');
-                if (descEl) descEl.textContent = colorItem.desc;
-                
-                const originEl = card.querySelector('.color-origin');
-                if (originEl) originEl.innerHTML = `<i class="fa-solid fa-mountain-sun"></i> ${colorItem.origin}`;
-            }
-
-            // E. Update Typo Specimen Card
-            const titleFontNameElement = document.getElementById('typo-title-font-name');
-            const specimenLarge = document.getElementById('typo-specimen-large');
-            const specimenAlphabet = document.getElementById('typo-specimen-alphabet');
-            const previewHeadline = document.getElementById('typo-preview-headline');
-            const previewParagraph = document.getElementById('typo-preview-paragraph');
-
-            if (titleFontNameElement) titleFontNameElement.textContent = data.titleFont;
-            if (specimenLarge) specimenLarge.textContent = data.specimenLarge;
-            if (specimenAlphabet) specimenAlphabet.innerHTML = data.specimenAlphabet;
-            if (previewHeadline) previewHeadline.textContent = data.previewHeadline;
-            if (previewParagraph) previewParagraph.textContent = data.previewParagraph;
-
-            // F. Update UI Preview Card details
-            const uiTitle = document.getElementById('ui-card-title');
-            const uiDesc = document.getElementById('ui-card-desc');
-            if (uiTitle) uiTitle.textContent = brandName === 'RS11' ? 'Wohnung RS11' : 'Wohnung ESCHEN 11';
-            if (uiDesc) {
-                uiDesc.textContent = brandName === 'RS11' 
-                    ? 'Wohnungseinheit mit warmen Erdtönen, hellen Raumhintergründen und fein abgestimmten dunklen Kontrastelementen.'
-                    : 'Wohnungseinheit mit hellen mineralischen Nuancen, tiefen kontrastierenden Profilfarben und edlen warmen Highlights.';
-            }
-
-
-
-            // G. Update Button Showcase Descriptions
-            const btnPrimaryDesc = document.getElementById('btn-primary-desc');
-            const btnSecondaryDesc = document.getElementById('btn-secondary-desc');
-            const btnAccentDesc = document.getElementById('btn-accent-desc');
-
-            if (btnPrimaryDesc) btnPrimaryDesc.textContent = data.buttons.primary.desc;
-            if (btnSecondaryDesc) btnSecondaryDesc.textContent = data.buttons.secondary.desc;
-            if (btnAccentDesc) btnAccentDesc.textContent = data.buttons.accent.desc;
-
-            // H. Update Branding Name Showcase
-            const brandShowcaseName = document.getElementById('brand-showcase-name');
-            const brandShowcaseSlogan = document.getElementById('brand-showcase-slogan');
-            if (brandShowcaseName) brandShowcaseName.textContent = data.brandName;
-            if (brandShowcaseSlogan) brandShowcaseSlogan.textContent = data.brandSlogan;
-        }
-
-        // --- 3. Clipboard-Copy Logik ---
+        // --- 1. Clipboard-Copy Logik ---
         function copyColor(hex, name) {
             navigator.clipboard.writeText(hex).then(() => {
                 const toast = document.getElementById('toast');
@@ -1477,44 +1255,6 @@
             }
         }
 
-        // --- 4. Switcher-Logik ---
-        function selectVariant(variantKey) {
-            document.querySelectorAll('.header-switcher-btn').forEach(btn => {
-                const active = btn.getAttribute('data-variant') === variantKey;
-                btn.classList.toggle('active', active);
-                btn.setAttribute('aria-selected', active ? 'true' : 'false');
-            });
-
-            const mainContent = document.getElementById('moodboard-main-wrapper');
-            if (mainContent) {
-                mainContent.style.opacity = '0.3';
-                mainContent.style.filter = 'blur(4px)';
-                mainContent.style.transition = 'all 0.3s ease';
-
-                setTimeout(() => {
-                    renderMoodboard(variantKey);
-                    mainContent.style.opacity = '1';
-                    mainContent.style.filter = 'none';
-                }, 300);
-            } else {
-                renderMoodboard(variantKey);
-            }
-
-            document.title = `Brand Moodboard — ${variantKey}`;
-            
-            const mainImg = document.getElementById('mood-main-image');
-            if (mainImg) {
-                mainImg.src = variantKey === 'RS11' ? 'rendering_innenraum.png' : 'rendering_fassade.png';
-            }
-        }
-
-        document.querySelectorAll('.header-switcher-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                const variantKey = button.getAttribute('data-variant');
-                selectVariant(variantKey);
-            });
-        });
-
         const simulateClickBtn = document.getElementById('simulate-click-btn');
         if (simulateClickBtn) {
             simulateClickBtn.addEventListener('click', function() {
@@ -1533,8 +1273,6 @@
             });
         }
 
-        // --- 5. Initiales Rendern (RS11) ---
-        selectVariant('RS11');
 
     </script>
 </body>
